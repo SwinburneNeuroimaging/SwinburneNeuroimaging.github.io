@@ -23,11 +23,10 @@ Example of a batch script:
 
 module load apptainer (this is only an example: need to load modles to run python scripts)
 
-export subj=$1 #$ to get the value of the variable. 
-export ses=$2
+export variable=$1 #$ to get the value of the variable.
 
 #Edit path to code - project specific.
-/execute_script_path.sh ${subj} ${ses} #This is the current path to the container to the 
+/execute_script_path.sh ${variable} #This is the current path to the container to the 
 
 ```
 
