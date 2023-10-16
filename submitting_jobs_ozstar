@@ -1,0 +1,48 @@
+This is a guide on how to submit a job to Swinburne Super Computer. This is just a guide and individual projects will require different paramters and set-ups. 
+
+
+Using the Super computer, jobs (actions asked of the Super computer) can be submitted via a shell script (a file ending in .sh). 
+Within the Bash script, comments are prefixed with SBATCH at the beginning of a Bash script are understood by Slurm as parameters describing resource requests and other submissions options. A complete list of parameters can be obtained from the sbatch manual page (type man sbatch into the terminal after logging into OzStar/ Ngarrgu Tindebeek)
+Complete instructions on how to create and submit a job can be found here: https://supercomputing.swin.edu.au/docs/2-ozstar/oz-slurm-create.html
+Below is an example of a SBATCH Script that, 
+Example of a batch script:
+
+```
+#!/bin/bash  	 #A shebang is needed at the start of a script
+#SBATCH -J XXXX	 #Change the XXXX after the -J to give the job a name
+#SBATCH --time=4:00:00  	#The time requested from the cpu’s (e.g., 4 hours)
+#SBATCH -n 1 	#The maximum number of tasks per a node – default is one task per a node.
+#SBATCH --cpus-per-task=2 	#The number of tasks per a cpu
+#SBATCH --mem-per-cpu=16G    #The amount of RAM per a cpu (e.g., 16Gb)
+#SBATCH --tmp=40GB	# The minimum amount of temporary disk space per node.  Default units are megabytes.
+#SBATCH --mail-type=ALL 	# Notify  user  by  email  when  certain  event  types  occur (NONE, BEGIN, END, FAIL, ALL)
+#SBATCH --mail-user=XXX@XXXX  #Specifiy a user email address to receive emails about the job.
+#SBATCH -e  /File-name/log/error_%A%a.log   #Specify the location error logs are saved too (must have a directory called ‘log’ for this to work). 
+#SBATCH -o /File-name/log/output_%A%a.log   #Specify the location of the output logs are saved too (must have a directory called ‘log’ for this to work).	
+#Edit settings above to suite each project and the location of the output logs. 
+
+module load apptainer (this is only an example: need to load modles to run python scripts)
+
+export subj=$1 #$ to get the value of the variable. 
+export ses=$2
+
+#Edit path to code - project specific.
+/execute_script_path.sh ${subj} ${ses} #This is the current path to the container to the 
+
+```
+
+Once the bash script is ready to submitted, type 
+sbatch file_name.sh and enter in in the terminal to run the script. 
+Under the script, the output will be:
+sbatch: Submitted batch job 99999999 (this will be the job number). 
+
+
+Once submitted to the queue, execution of the script/job, will fall into one of 3 states:
+1.	PENDING: The job then enters the queue in the PENDING state.
+2.	RUNNING: Once resources become available and the job has highest priority, an allocation is created for it and it goes to the RUNNING state.
+3.	If the job completes correctly, it goes to the COMPLETED state, otherwise, it is set to the FAILED state.
+To check the status of a job, users can use the job monitor (https://supercomputing.swin.edu.au/monitor/), by searching the job number/name or the username that submitted the job.
+
+Parallel Processing
+The super computer at Swinburne is capable of running jobs in parallel (at the same time). For example, if analysis for one participant takes 40 minutes and there are 10 participants, this will be 400 minutes of processing, where as OzStar can submit jobs for each participant separately, so the analysis for all participants will be completed in 40 minutes. 
+There are a number of ways to do this depending on the coding language used and the set-up of analysis scripts (e.g., python using sys.argv[], bash scripts – looping through each participant). 
