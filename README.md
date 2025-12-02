@@ -27,24 +27,24 @@ This repo will contain all manuals, guides and other documents for the user comm
 Inline code: `code here`
 
 Code blocks with syntax highlighting:
-```
+`
 ```python
 def process_mri_data(filepath):
     """Process MRI data from file."""
     data = load_data(filepath)
     return preprocess(data)
 ```
-```
+`
 
 With line numbers and highlighting:
-```
+`
 ```python linenums="1" hl_lines="2-3"
 def analyze_scan(scan_id):
     # Load the scan data
     data = load_scan(scan_id)
     return analyze(data)
 ```
-```
+`
 
 ### Images
 ![Alt text for image](images/scan-example.png)
