@@ -4,11 +4,11 @@ Swinburne Neuroimaging Documentation
 This repo will contain all manuals, guides and other documents for the user community of Swinburne Neuroimaging.
 
 ## Table of Contents
-### Getting Started
-### Adding New Content
-### Adding New Tabs
-### Basic Markdown
-### Commiting and Pushing to GitHub
+- Getting Started
+- Adding New Content
+- Adding New Tabs
+- Basic Markdown
+- Commiting and Pushing to GitHub
 
 
 ### Getting Started
