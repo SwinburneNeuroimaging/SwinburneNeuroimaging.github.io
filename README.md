@@ -18,7 +18,7 @@ First, clone the repository to your local machine:
 git clone https://github.com/SwinburneNeuroimaging/SwinburneNeuroimaging.github.io.git
 cd SwinburneNeuroimaging.github.io
 ```
-### Step 2: Checkout to the Developement Branch
+### Step 2: Checkout to the Development Branch
 ```
 git checkout wiki
 ```
