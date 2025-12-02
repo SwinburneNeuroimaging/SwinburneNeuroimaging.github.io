@@ -36,7 +36,7 @@ source venv/bin/activate
 # Install MkDocs Material
 pip install mkdocs-material
 ```
-# Step 5: Serve documentation to preview changes locally
+### Step 5: Serve documentation to preview changes locally
 ```
 mkdocs serve --livereload
 ```
