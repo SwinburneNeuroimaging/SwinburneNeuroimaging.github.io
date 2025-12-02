@@ -3,6 +3,15 @@ Swinburne Neuroimaging Documentation
 
 This repo will contain all manuals, guides and other documents for the user community of Swinburne Neuroimaging.
 
+
+## Adding New Content
+### Creating a New Page
+1. Navigate to the `docs` directory
+2. Create a new Markdown file with a descriptive name (e.g., mri_safety.md)
+3. Add your content using Markdown syntax (see below for examples)
+4. Save the file
+
+
 ## Basic Markdown
 ### Text Formatting
 ```
@@ -48,8 +57,74 @@ With line numbers and highlighting:
 ```
 
 ### Images
+```
 ![Alt text for image](images/scan-example.png)
-
-# Or with a caption
+```
+Or with a caption
+```
 ![MRI Scan Example](images/scan-example.png)
 *Figure 1: Example MRI scan showing...*
+```
+
+### Admonitions (Callouts)
+
+Types: `note`, `abstract`, `info`, `tip`, `success`, `question`, `warning`, `failure`, `danger`, `bug`, `example`, `quote`
+
+```
+!!! note "Important Information"
+    This is a note callout with important information.
+
+!!! warning "Safety Warning"
+    Always check for metal objects before entering the scanner room.
+
+!!! tip "Pro Tip"
+    Use this shortcut to save time during data processing.
+
+!!! danger "Critical Safety Alert"
+    Never enter the scanner room with metal objects.
+```
+Collapsible Callouts:
+```
+??? abstract "Important Information"
+    This is a note callout with important information.
+
+??? info "Safety Warning"
+    Always check for metal objects before entering the scanner room.
+
+??? success "Pro Tip"
+    Use this shortcut to save time during data processing.
+
+??? question "Critical Safety Alert"
+    Never enter the scanner room with metal objects.
+```
+
+### Diagrams (Mermaid)
+MkDocs Material supports Mermaid diagrams
+
+- Flowcharts:
+```
+    ```mermaid
+    graph LR
+    A[Start] --> B{Failure?};
+    B -->|Yes| C[Investigate...];
+    C --> D[Debug];
+    D --> B;
+    B ---->|No| E[Success!];
+    ```
+```
+
+- Sequence Diagrams:
+```
+    ```mermaid
+    sequenceDiagram
+        participant R as Researcher
+        participant P as Participant
+        participant S as Scanner
+    
+        R->>P: Explain procedure
+        P->>R: Sign consent form
+        R->>S: Position participant
+        S->>S: Run scanning protocol
+        S->>R: Complete scan
+    ```
+```
