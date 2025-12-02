@@ -6,12 +6,11 @@ This repo will contain all manuals, guides and other documents for the user comm
 ## Table of Contents
 - Getting Started
 - Adding New Content
-- Adding New Tabs
 - Basic Markdown
 - Commiting and Pushing to GitHub
 
 
-### Getting Started
+## Getting Started
 ### Step 1: Clone the Repo
 First, clone the repository to your local machine:
 ```
@@ -48,6 +47,11 @@ The site will be available at http://localhost:8000. The server will automatical
 2. Create a new Markdown file with a descriptive name (e.g., mri_safety.md)
 3. Add your content using Markdown syntax (see below for examples)
 4. Save the file
+
+### Adding New Tabs
+1. Navigate to the `docs` directory
+2. Create a new directory with a descriptive name (e.g. Analysis Examples)
+3. Add Markdown files to this directory
 
 
 ## Basic Markdown
