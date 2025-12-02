@@ -3,6 +3,44 @@ Swinburne Neuroimaging Documentation
 
 This repo will contain all manuals, guides and other documents for the user community of Swinburne Neuroimaging.
 
+## Table of Contents
+### Getting Started
+### Adding New Content
+### Adding New Tabs
+### Basic Markdown
+### Commiting and Pushing to GitHub
+
+
+### Getting Started
+### Step 1: Clone the Repo
+First, clone the repository to your local machine:
+```
+git clone https://github.com/SwinburneNeuroimaging/SwinburneNeuroimaging.github.io.git
+cd SwinburneNeuroimaging.github.io
+```
+### Step 2: Checkout to the Developement Branch
+```
+git checkout wiki
+```
+### Step 3: Setup Python Environment
+```
+# Create a virtual environment
+python -m venv venv
+
+# Activate the virtual environment
+# On macOS/Linux:
+source venv/bin/activate
+# On Windows:
+.\venv\Scripts\activate
+
+# Install MkDocs Material
+pip install mkdocs-material
+```
+# Step 5: Serve documentation to preview changes locally
+```
+mkdocs serve --livereload
+```
+The site will be available at http://localhost:8000. The server will automatically reload when you save changes.
 
 ## Adding New Content
 ### Creating a New Page
