@@ -1,56 +1,15 @@
-# Setting up Neurodesk and Connecting to OzSTAR
-
-This guide will walk you through setting up Neurodesk and connecting it to OzSTAR for neuroimaging analysis.
-
----
-
-## 3. Setting up Neurodesk
-
-Swinburne Neuroimaging is a partner in creating the Neurodesk analysis platform, an extendible, portable, easy to use desktop environment for cognitive neuroscience data analysis.
-
-### Available Options
-
-Researchers can access and use Neurodesk in several different ways:
-
-- **ARDC Virtual Desktop Service** (recommended)
-- Downloading and installing Neurodesk onto your own computer or workstation
-- Using Neurodesk on a virtual workstation on the ARDC Nectar Research Cloud
-- Connecting to OzSTAR from Neurodesk
-
-!!! success "Recommended: ARDC Virtual Desktop Service"
-    The **ARDC Virtual Desktop Service** is the preferred method for using Neurodesk. It provides a stable, pre-configured environment with OzSTAR integration and requires no local installation.
-
-### Option A: ARDC Virtual Desktop Service (Recommended)
-
-The ARDC Virtual Desktop Service provides a cloud-based desktop environment with Neurodesk pre-installed. This is the easiest and most reliable way to get started.
-
-**Setup Instructions:**
-
-1. Follow the complete setup instructions at the [Neurodesk NECTAR guide](https://www.neurodesk.org/docs/neurodesktop/getting-started/nectar/)
-
-2. When creating your desktop, select the **Monash NECTAR zone** for optimal performance and stable connections to OzSTAR
-
-!!! tip "Why Monash NECTAR Zone?"
-    Based on our experience, the Monash NECTAR zone provides the most stable connection when accessing OzSTAR resources.
-
-### Option B: Local Installation
-
-If you prefer to run Neurodesk on your own workstation, complete installation instructions are available at [neurodesk.org](https://www.neurodesk.org/).
-
-!!! note "Local vs Cloud"
-    While local installation is possible, the ARDC Virtual Desktop Service offers better integration with OzSTAR and eliminates hardware requirements on your local machine.
-
----
-
-## 4. Connecting Neurodesk to OzSTAR
+# Step 4 - Connect Neurodesk to OzSTAR
 
 Once you have Neurodesk running (via any method), you'll need to establish a connection to OzSTAR to access your project files and run computations.
 
-### Connection Setup
+## Connection Setup
 
 **Step 1: Open a terminal**
 
 Open a new terminal window in your Neurodesk environment.
+
+!!! info "What is a terminal?"
+    If you don't know how to open a terminal, see [Open a terminal on Neurodesk](/Getting Started/Additional Information/open_a_neurodesk_terminal/).
 
 **Step 2: Download the connection script**
 
@@ -103,7 +62,7 @@ mkdir /home/XXX/private
 
 Press ENTER.
 
-### What You Can Access
+## What You Can Access
 
 After successful connection, you'll have access to these OzSTAR directories from within Neurodesk:
 
@@ -113,14 +72,18 @@ After successful connection, you'll have access to these OzSTAR directories from
 | **Neuroimaging Public** | `/dagg/public/neuro` | Shared neuroimaging resources and datasets |
 | **Project Directory** | `/fred/ozYYY` | Your project's shared storage (replace `ozYYY` with your project ID) |
 
-### Persistence and Reconnection
+---
+
+## Persistence and Reconnection
 
 !!! info "Connection Persistence"
     **Good news:** The connection setup is permanent for the life of your desktop. You don't need to repeat these steps for future logins.
     
     **Exception:** If you shelve and restart your virtual desktop, you'll need to repeat Step 5 (entering your password 3 times) to re-establish the connection.
 
-### File Storage Best Practices
+---
+
+## File Storage Best Practices
 
 !!! warning "Critical: Save Files in the Right Location"
     **Always save your work** in one of these locations:
@@ -133,13 +96,14 @@ After successful connection, you'll have access to these OzSTAR directories from
 
 ---
 
-## Next Steps
-
-Once you've successfully connected Neurodesk to OzSTAR, you're ready to obtain example code and containers, and begin running your neuroimaging analysis workflows.
-
 ## Support
 
 If you encounter issues during setup or connection:
 
-- **OzSTAR technical support**: [hpc-support@swin.edu.au](mailto:hpc-support@swin.edu.au)
 - **Swinburne Neuroimaging support**: [neuroinformatics@swin.edu.au](mailto:neuroinformatics@swin.edu.au)
+
+---
+
+## Next Steps
+
+Once you've successfully connected Neurodesk to OzSTAR, you're ready to obtain example code and containers, and begin running your neuroimaging analysis workflows.
