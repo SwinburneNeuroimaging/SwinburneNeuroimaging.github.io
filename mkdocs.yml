@@ -22,6 +22,14 @@ theme:
     - navigation.indexes
 
   palette:
+    # Light Mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: red
+      accent: deep blue
+
     # Dark Mode
     - scheme: slate
       toggle:
@@ -30,13 +38,7 @@ theme:
       primary: blue
       accent: deep purple
 
-    # Light Mode
-    - scheme: default
-      toggle:
-        icon: material/weather-night
-        name: Light mode
-      primary: green
-      accent: deep orange
+
 
 markdown_extensions:
   - attr_list
