@@ -1,0 +1,28 @@
+sniwiki/bin/
+sniwiki/
+
+# Virtual environment
+venv/
+.venv/
+env/
+.env/
+
+# Compiled Python files
+__pycache__/
+*.pyc
+*.pyd
+*.so
+
+# Distribution / packaging
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# IDE-specific files (e.g., PyCharm)
+.idea/
+
+# Environment variables
+.env
+.DS_Store

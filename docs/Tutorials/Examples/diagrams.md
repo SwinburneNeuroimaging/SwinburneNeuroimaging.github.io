@@ -25,3 +25,25 @@ sequenceDiagram
   Terminal->>Database: Request customer data
   Database-->>Terminal: Customer data
 ```
+
+
+```mermaid
+  sequenceDiagram
+      participant R as Researcher
+      participant P as Participant
+      participant S as Scanner
+  
+      R->>P: Explain procedure
+      P->>R: Sign consent form
+      R->>S: Position participant
+      S->>S: Run scanning protocol
+      S->>R: Complete scan
+```
+
+```mermaid
+graph LR
+    A[Participant Arrival] --> B[Safety Screening]
+    B --> C[Setup]
+    C --> D[Scanning]
+    D --> E[Post-Scan]
+```
