@@ -1,22 +1,22 @@
-# SSH - Connecting to Remote Computers
+# SSH Basics - Connecting to Remote Computers
 
 SSH (Secure Shell) is a protocol that lets you securely log in to and run commands on a remote computer, such as Swinburne's Supercoputers OzSTAR & NT, from your local terminal. Once connected, your terminal behaves as if you are sitting at that remote machine.
 
 ## Basic login
 To connect to a remote computer, you need two things: a username and the hostname (the address of the remote computer).
 ```bash
-ssh username@hostmachine
+$ ssh username@hostmachine
 ```
 For users of OzSTAR or NT at Swinburne, you can login with your username like this:
 ```bash
-ssh username@ozstar.swin.edu.au
-ssh username@nt.swin.edu.au
+$ ssh username@ozstar.swin.edu.au
+$ ssh username@nt.swin.edu.au
 ```
 You will be prompted to enter your password. Once authenticated, you will see the remote machine's prompt and can start typing commands. Everything you type from this point runs on the remote computer, not your own.
 
 To end your session and return to your local machine, type:
 ```bash
-exit
+$ exit
 ```
 
 !!! tip
@@ -25,15 +25,15 @@ exit
 ## Copying files with `scp`
 `scp` (secure copy) lets you transfer files between your local machine and a remote server. It works similarly to `cp`, but you specify the remote machine using the same `username@hostname` format as SSH.
 ```bash
-scp source destination
+$ scp source destination
 ```
 ### Copying files to remote
 ```bash
-scp myfile.txt username@hostname:/home/username/data/
+$ scp myfile.txt username@hostname:/home/username/data/
 ```
 ### Copying files from remote
 ```bash
-scp username@hostname:/home/username/results/output.nii.gz ./
+$ scp username@hostname:/home/username/results/output.nii.gz ./
 ```
 !!! Note
     Reminder that the `./` at the end means "copy it here, into my current local directory".
@@ -41,14 +41,14 @@ scp username@hostname:/home/username/results/output.nii.gz ./
 ### Copying entire directories
 Use the `-r` flag (recursive), the same as with `cp`:
 ```bash
-scp -r my_folder/ username@hostname:/home/username/data/
-scp -r username@hostname:/home/username/results/ ./
+$ scp -r my_folder/ username@hostname:/home/username/data/
+$ scp -r username@hostname:/home/username/results/ ./
 ```
 !!! tip
     If you are transferring large datasets, consider using `rsync` instead of `scp`. It only transfers files that have changed, so it is much faster if you are syncing a folder repeatedly.
 
     ```bash
-    rsync -avz my_folder/ username@hostname:/home/username/data/
+    $ rsync -avz my_folder/ username@hostname:/home/username/data/
     ```
 
 
@@ -80,7 +80,7 @@ Typing your password every time you connect can get tedious. SSH keys allow you 
 
 ### Step 1 - Generate a key pair
 ```bash
-ssh-keygen -t ed25519 -C "your_email@example.com"
+$ ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
 You will be asked where to save the key (press Enter to accept the default) and optionally set a passphrase (basically a password to use the keys, this is optional). The default location is `~/.ssh/`.
 
@@ -89,20 +89,20 @@ You will be asked where to save the key (press Enter to accept the default) and 
 
 ### Step 2 — Copy your public key to the server
 ```bash
-ssh-copy-id username@hostname
+$ ssh-copy-id username@hostname
 ```
 For OzSTAR and NT users still will be
 
 ```bash
-ssh-copy-id username@ozstar.swin.edu.au
-ssh-copy-id username@nt.swin.edu.au
+$ ssh-copy-id username@ozstar.swin.edu.au
+$ ssh-copy-id username@nt.swin.edu.au
 ```
 
 You will be asked for your password one last time. After this, SSH will use your key instead (and potentially ask you for you passphrase if you set one).
 
 ### Step 3 - Login without a password
-```
-ssh username@hostname
+```bash
+$ ssh username@hostname
 ```
 You should now connect without being prompted for a password (unless you set a passphrase).
 
@@ -122,23 +122,23 @@ Sometimes a remote server is running a service, such as a Jupyter notebook or a 
 
 However, you can use SSH port forwarding to create a secure tunnel between a port on your local machine and a port on the remote server.
 ```bash
-ssh -L local_port:localhost:remote_port username@hostname
+$ ssh -L local_port:localhost:remote_port username@hostname
 ```
 The `-L` flag tells ssh to setup *local* port forwarding and listen you your local machine For example, if a Jupyter notebook is running on port `8888` on the OzSTAR supercomputer:
 ```bash
-ssh -L 8888:localhost:8888 username@ozstar.swin.edu.au
+$ ssh -L 8888:localhost:8888 username@ozstar.swin.edu.au
 ```
 After running this command, open your local browser and go to `http://localhost:8888`. The traffic is securely tunnelled through SSH to the remote server.
 
 ### Running in the background
 If you want to set up the tunnel without starting an interactive session, add the `-N` flag (do not execute a remote command) and `-f` (run in the background):
 ```bash
-ssh -L 8888:localhost:8888 -N -f username@hostname
+$ ssh -L 8888:localhost:8888 -N -f username@hostname
 ```
 To close a background tunnel, find its process ID and kill it:
 ```bash
-ps aux | grep ssh
-kill <process_id>
+$ ps aux | grep ssh
+$ kill <process_id>
 ```
 !!! tip
     If you get an error saying the port is already in use, try a different local port number — for example, `8889:localhost:8888`. You can use any number between 1024 and 65535.
@@ -150,19 +150,19 @@ If your SSH connection drops, due to a network issue or closing your laptop, any
 
 `tmux` is run on the remote server, not your local machine. So you should SSH in first, and then start a `tmux` session from there. The typical workflow looks like this:
 ```bash
-ssh username@hostname          # 1. Connect to the remote server
-tmux new -s preprocessing      # 2. Start a tmux session on the remote server
+$ ssh username@hostname          # 1. Connect to the remote server
+$ tmux new -s preprocessing      # 2. Start a tmux session on the remote server
 # ... run your analysis ...
 # Ctrl + B, then D             # 3. Detach and safely close your laptop
 ```
 
 ### Starting a session
 ```bash
-tmux
+$ tmux
 ```
 Or start a named session so you can find it easily later:
 ```bash
-tmux new -s session_name
+$ tmux new -s session_name
 ```
 
 ### Detaching from a session
@@ -174,12 +174,12 @@ This detaches you from the session and returns you to your normal prompt. The se
 
 ### Listing sessions
 ```bash
-tmux ls
+$ tmux ls
 ```
 ### Reattaching to a session
 ```bash
-tmux attach                   # Reattach to the most recent session
-tmux attach -t session_name   # Reattach to a named session
+$ tmux attach                   # Reattach to the most recent session
+$ tmux attach -t session_name   # Reattach to a named session
 ```
 
 ### Closing a session
