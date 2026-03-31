@@ -11,4 +11,6 @@
 - [Connect Neurodesk to OzSTAR](./neurodesk/connect_neurodesk_to_ozstar.md)
 
 ## Supercomputing Tutorials
+- [Creating an OzSTAR Account](./supercomputing/create_ozstar_account.md)
+- [Accessing OzSTAR](./supercomputing/accessing_ozstar.md)
 - [Submitting Jobs to OzSTAR](./supercomputing/submitting_jobs_to_ozstar.md)
