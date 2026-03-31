@@ -1,6 +1,7 @@
 # Documentation
 
-## Explainers
+## FAQ
+- [Where is my Data?](./where_is_my_data.md)
 - [What is OzSTAR?](./what_is_ozstar.md)
 - [What is Neurodesk](./what_is_neurodesk.md)
 
