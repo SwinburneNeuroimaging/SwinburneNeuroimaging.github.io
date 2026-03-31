@@ -1,0 +1,101 @@
+{% extends "main.html" %}
+
+{% block tabs %}
+  {{ super() }}
+  <!-- Hero -->
+  <section class="sni-hero">
+    <div class="sni-hero__image">
+      <img
+        src="{{ 'assets/images/sni_banner.jpeg' | url }}"
+        alt="Swinburne Neuroimaging banner"
+        draggable="false"
+      >
+    </div>
+    <div class="sni-hero__overlay"></div>
+    <div class="sni-hero__content md-typeset">
+      <h1>Swinburne Neuroimaging Docs</h1>
+      <p>{{ config.site_description or "Our Neuroimaging facility supports cutting-edge research into the brain and its disorders. We're the international field leaders and boast Australia's fastest human brain imaging system. " }}</p>
+      
+      <div class="sni-hero__buttons">
+        <a href="{{ 'about/' | url }}" class="md-button md-button">
+          About Us
+        </a>
+        <a href="{{ 'facilities/' | url }}" class="md-button md-button--primary">
+          Our Facilities
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature cards -->
+<section class="sni-features md-typeset">
+  <div class="sni-features__grid">
+
+    <a href="{{ 'getting_started/' | url }}" class="sni-card">
+      <div class="sni-card__bar sni-card__bar--teal"></div>
+      <span class="sni-card__tag sni-card__tag--teal">Facilities</span>
+      <h2>I want to use Swinburne Neuroimaging's facilities for a project</h2>
+      <p>Book time on our MRI, MEG, EEG, or TMS equipment.</p>
+      <span class="sni-card__arrow">Getting started →</span>
+    </a>
+
+    <a href="{{ 'tutorials/neurodesk/' | url }}" class="sni-card">
+      <div class="sni-card__bar sni-card__bar--blue"></div>
+      <span class="sni-card__tag sni-card__tag--blue">Computing</span>
+      <h2>I want to use Swinburne Neuroimaging's computing resources</h2>
+      <p>Set up supercomputer access and Neurodesk. Process neuroimaging data using SNI's HPC infrastructure.</p>
+      <span class="sni-card__arrow">Neurodesk tutorial →</span>
+    </a>
+
+    <a href="{{ 'tutorials_and_documentation/tutorials/' | url }}" class="sni-card">
+      <div class="sni-card__bar sni-card__bar--purple"></div>
+      <span class="sni-card__tag sni-card__tag--purple">Tutorials</span>
+      <h2>I need neuroimaging tutorials</h2>
+      <p>Step-by-step guides covering MRI, MEG, EEG analysis pipelines, preprocessing, and more.</p>
+      <span class="sni-card__arrow">Browse tutorials →</span>
+    </a>
+
+    <a href="{{ 'documentation/' | url }}" class="sni-card">
+      <div class="sni-card__bar sni-card__bar--amber"></div>
+      <span class="sni-card__tag sni-card__tag--amber">Docs</span>
+      <h2>I need more documentation</h2>
+      <p>SOPs, data management policies, software references, and technical specs for SNI systems.</p>
+      <span class="sni-card__arrow">View docs →</span>
+    </a>
+
+  </div>
+</section>
+
+  <!-- Scroll fade-in script -->
+<script>
+  document$.subscribe(function () {
+    const cards = document.querySelectorAll(".sni-card");
+
+    cards.forEach((card) => {
+      card.classList.remove("animate", "visible");
+    });
+
+    setTimeout(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      cards.forEach((card, i) => {
+        card.classList.add("animate");
+        setTimeout(() => observer.observe(card), i * 100);
+      });
+    }, 50);
+  });
+</script>
+{% endblock %}
+
+{% block content %}{% endblock %}
+{% block footer %}{% endblock %}

@@ -1,4 +1,4 @@
-site_name: Swinburne Neuroimaging Wiki
+site_name: Swinburne Neuroimaging Documentation
 site_url: https://SwinburneNeuroimaging.github.io.github.io/
 theme:
   name: material
@@ -21,23 +21,41 @@ theme:
     - navigation.top
     - navigation.indexes
 
+  custom_dir: overrides
+
+
+
   palette:
     # Light Mode
+    # - scheme: default
+    #   toggle:
+    #     icon: material/weather-night
+    #     name: Light mode
+    #   primary: red
+    #   accent: deep-blue
+
+    # # Dark Mode
+    # - scheme: slate
+    #   toggle:
+    #     icon: material/weather-sunny
+    #     name: Dark mode
+    #   primary: blue
+    #   accent: purple
+    # Light mode
     - scheme: default
+      primary: blue
+      accent: teal
       toggle:
         icon: material/weather-night
-        name: Light mode
-      primary: red
-      accent: deep blue
+        name: Switch to dark mode
 
-    # Dark Mode
+    # Dark mode
     - scheme: slate
+      primary: blue
+      accent: cyan
       toggle:
         icon: material/weather-sunny
-        name: Dark mode
-      primary: blue
-      accent: deep purple
-
+        name: Switch to light mode
 
 
 markdown_extensions:
@@ -60,10 +78,16 @@ markdown_extensions:
       alternate_style: true
   - admonition
   - pymdownx.details
-
+  - md_in_html
 
 # nav:
 #     - Home: index.md
 #     - Getting Started:
     
 
+extra_css:
+  - stylesheets/cards.css
+  - stylesheets/home.css
+
+
+  

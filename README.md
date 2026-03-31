@@ -1,5 +1,5 @@
 # SwinburneNeuroimaging.github.io
-Swinburne Neuroimaging Documentation
+Swinburne Neuroimaging Documentation is available here: [https://swinburneneuroimaging.github.io/](https://swinburneneuroimaging.github.io/)
 
 This repo will contain all manuals, guides and other documents for the user community of Swinburne Neuroimaging.
 
