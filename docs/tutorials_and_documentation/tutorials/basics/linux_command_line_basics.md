@@ -54,44 +54,44 @@ For example, the path to the Documents folder could also be specified like this:
 
 ### Print your current location
 ```bash
-pwd
+$ pwd
 ```
 `pwd` stands for *print working directory*. This prints the path of your current *working directory* (the directory you are in). Basically, this tells you where you *currently* are in the file tree. This path is also often denoted by `.`. So if you see a path starting with `./` it is a path from inside your current directory. 
 
 ### List files and directories
 ```bash
-ls
+$ ls
 ```
 `ls` stands for *list*. It will show you everything that is inside the current directory. 
 
 We can provide additional options (called *flags*) to `ls` to have more information.
 ```bash
-ls -l        # Long format — shows permissions, size, date
-ls -a        # Show hidden files (files starting with a dot)
-ls -lh       # Long format with human-readable file sizes
-ls -la       # Combine: long format + hidden files
-ls -lha      # Combine: long format + hidden files + human-readable file sizes
+$ ls -l        # Long format — shows permissions, size, date
+$ ls -a        # Show hidden files (files starting with a dot)
+$ ls -lh       # Long format with human-readable file sizes
+$ ls -la       # Combine: long format + hidden files
+$ ls -lha      # Combine: long format + hidden files + human-readable file sizes
 ```
 
 ### Change directory
 ```bash
-cd DirectoryPath
+$ cd DirectoryPath
 ```
 You can either provide a *relative path* or an *absolute path* to the directory. A *relative path* is the path from your current working directory to the new directory; however it will only work from the current location. An *absolute path* is the path from the root directory to the new directory; but this path will work from anywhere.
 
 For example, if you are in the current working directory `/Users/Name/` to get to `/Documents` (a directory in `Name`) you can do either of the following:
 ```bash
-cd Documents              # Uses relative path (only works at /Users/Name/)
-cd /Users/Name/Documents  # Uses absolute path (will work anywhere)
+$ cd Documents              # Uses relative path (only works at /Users/Name/)
+$ cd /Users/Name/Documents  # Uses absolute path (will work anywhere)
 ```
 Typically, using relative paths is good for moving up and down a small number of directories, whereas using the absolute path is more common when moving up/down a large number of directories and you know where you want to go.
 
 There are additionally some special paths that will be useful to navigate around your filesystem.
 ```bash
-cd ~         # Go to your home directory
-cd ..        # Go up one level (parent directory)
-cd -         # Go back to the previous directory
-cd /         # Go to the root of the filesystem
+$ cd ~         # Go to your home directory
+$ cd ..        # Go up one level (parent directory)
+$ cd -         # Go back to the previous directory
+$ cd /         # Go to the root of the filesystem
 ```
 
 !!! tip "Tab completion"
@@ -101,50 +101,50 @@ cd /         # Go to the root of the filesystem
 ## Getting Help
 Before going any further, you should know that almost every single command you will ever use has a manual on how to use it. If you forget how to do something the manual can help you. It will list all the different flags, options and order you need to use the command.
 ```bash
-man ls          # Full manual for ls
-ls --help       # Quick usage summary
+$ man ls          # Full manual for ls
+$ ls --help       # Quick usage summary
 ```
 
 ## Working with directories and files
 
 ### Create a directory
 ```bash
-mkdir new_directory
+$ mkdir new_directory
 ```
 This will create a directory in your current location called `new_directory`. If you know you want to make a bunch of directories within each other, you can use the `-p` to make nested directories all in one go.
 ```bash
-mkdir -p my_project/data/raw
+$ mkdir -p my_project/data/raw
 ```
 
 ### Create an empty file
 ```bash
-touch notes.txt
+$ touch notes.txt
 ```
 This will create an empty `notes.txt` file with nothing inside it.
 
 ### Copy files and directories
 Copying files uses the `cp` command. This command will always require at least two arguments, the path of the source file and the path of the destination. By default, `cp` will *not* copy the contents inside directories. You need to use the `-r` flag to recursively copy directory contents. 
 ```bash
-cp source.txt destination.txt           # Copy a file
-cp source.txt /path/to/other/folder/    # Copy into a different directory
-cp -r my_folder/ backup_folder/         # Copy a directory (-r means recursive)
+$ cp source.txt destination.txt           # Copy a file
+$ cp source.txt /path/to/other/folder/    # Copy into a different directory
+$ cp -r my_folder/ backup_folder/         # Copy a directory (-r means recursive)
 ```
 
 
 ### Moving and renaming files and directories
 The `mv` command is used for both moving and renaming. It works similar to `cp`.
 ```bash
-mv oldname.txt newname.txt              # Rename a file
-mv file.txt /path/to/other/folder/      # Move a file
-mv my_folder/ /path/to/destination/     # Move a directory
+$ mv oldname.txt newname.txt              # Rename a file
+$ mv file.txt /path/to/other/folder/      # Move a file
+$ mv my_folder/ /path/to/destination/     # Move a directory
 ```
 
 ### Delete files and directories
 To delete a file or directory, use the `rm` command. However, use it carefully.
 
 ```bash
-rm file.txt                  # Delete a file
-rm -r my_folder/             # Delete a directory and everything inside it
+$ rm file.txt                  # Delete a file
+$ rm -r my_folder/             # Delete a directory and everything inside it
 ```
 !!! warning
     There is no recycle bin in the terminal! **Deleted files are gone permanently!** I'll say that again. *Deleted files are gone permanently*. Double-check your `rm` command before pressing Enter. Avoid `rm -rf` (force delete recursively) unless you are 100% certain of what you are deleting.
@@ -154,11 +154,11 @@ rm -r my_folder/             # Delete a directory and everything inside it
 There are a lot of different ways to view the contents of a file. The most common ones are `cat`, `less`, `head` and `tail`.
 
 ```bash
-cat file.txt            # Print the whole file to the terminal
-less file.txt           # View file page by page (press Q to quit)
-head file.txt           # Show the first 10 lines
-tail file.txt           # Show the last 10 lines
-tail -f logfile.txt     # Follow a file in real time (useful for logs)
+$ cat file.txt            # Print the whole file to the terminal
+$ less file.txt           # View file page by page (press Q to quit)
+$ head file.txt           # Show the first 10 lines
+$ tail file.txt           # Show the last 10 lines
+$ tail -f logfile.txt     # Follow a file in real time (useful for logs)
 ```
 
 ## Wildcards
@@ -168,43 +168,43 @@ Wildcards are special characters that match multiple filenames at once, saving y
 `*` matches any number of characters (including none).
 
 ```bash
-ls *.nii.gz                        # List all NIfTI files in current directory
-ls sub-*                   # List everything starting with "sub-"
-cp /data/sub-01/anat/*.nii.gz ./   # Copy all NIfTI files from a folder
-rm *_temp.txt                      # Delete all files ending in _temp.txt
+$ ls *.nii.gz                        # List all NIfTI files in current directory
+$ ls sub-*                   # List everything starting with "sub-"
+$ cp /data/sub-01/anat/*.nii.gz ./   # Copy all NIfTI files from a folder
+$ rm *_temp.txt                      # Delete all files ending in _temp.txt
 ```
 
 ### `?` — match a single character
 `?` matches exactly one character.
 
 ```bash
-ls sub-0?.nii.gz      # Matches sub-01, sub-02 ... sub-09, but not sub-10
-ls run-?_bold.nii.gz  # Matches run-1_bold, run-2_bold, etc.
+$ ls sub-0?.nii.gz      # Matches sub-01, sub-02 ... sub-09, but not sub-10
+$ ls run-?_bold.nii.gz  # Matches run-1_bold, run-2_bold, etc.
 ```
 
 ### `[]` — match a set of characters
 Square brackets match any one character from the set you specify.
 
 ```bash
-ls sub-0[123].nii.gz        # Matches sub-01, sub-02, sub-03 only
-ls sub-[0-9][0-9].nii.gz    # Matches sub-01 through sub-99
-ls *.[st][hx]               # Matches .sh and .tx extensions
+$ ls sub-0[123].nii.gz        # Matches sub-01, sub-02, sub-03 only
+$ ls sub-[0-9][0-9].nii.gz    # Matches sub-01 through sub-99
+$ ls *.[st][hx]               # Matches .sh and .tx extensions
 ```
 
 ### Practical neuroimaging examples
 
 ```bash
 # Copy all functional runs for one subject
-cp sub-01/func/*_bold.nii.gz /data/processed/
+$ cp sub-01/func/*_bold.nii.gz /data/processed/
 
 # List all T1w images across all subjects
-ls /data/sub-*/anat/*_T1w.nii.gz
+$ ls /data/sub-*/anat/*_T1w.nii.gz
 
 # Delete all intermediate files ending in _temp
-rm /data/sub-01/func/*_temp.nii.gz
+$ rm /data/sub-01/func/*_temp.nii.gz
 
 # Count how many subjects you have
-ls -d sub-*/ | wc -l
+$ ls -d sub-*/ | wc -l
 ```
 
 !!! warning
@@ -215,10 +215,10 @@ ls -d sub-*/ | wc -l
 ### Finding files by name
 You can use the `find` command to search for files.
 ```bash
-find . -name "sub01.nii"        # Search from current directory
-find /data -name "*.nii.gz"             # Find all NIfTI files under /data
-find . -type d -name "func"             # Find directories named "func"
-find . -mtime -7                        # Files modified in the last 7 days
+$ find . -name "sub01.nii"        # Search from current directory
+$ find /data -name "*.nii.gz"             # Find all NIfTI files under /data
+$ find . -type d -name "func"             # Find directories named "func"
+$ find . -mtime -7                        # Files modified in the last 7 days
 ```
 Here `-name`, `-type` and `-mtime` are various options for the `find` command. 
 
@@ -227,11 +227,11 @@ Reminder that the `.` means "start searching here" or "my current working direct
 ### Search inside files with `grep`
 Use `grep` to search for text patterns inside files.
 ```bash
-grep "error" logfile.txt                     # Find lines containing "error"
-grep -i "warning" logfile.txt                # Case-insensitive search
-grep -r "subject_id" /data/scripts/          # Search recursively in a directory
-grep -n "TR" scan_params.txt                 # Show line numbers with matches
-grep -v "skip" results.txt                   # Show lines that do NOT match
+$ grep "error" logfile.txt                     # Find lines containing "error"
+$ grep -i "warning" logfile.txt                # Case-insensitive search
+$ grep -r "subject_id" /data/scripts/          # Search recursively in a directory
+$ grep -n "TR" scan_params.txt                 # Show line numbers with matches
+$ grep -v "skip" results.txt                   # Show lines that do NOT match
 ```
 
 
@@ -241,13 +241,13 @@ grep -v "skip" results.txt                   # Show lines that do NOT match
 A pipe sends the output of one command as input to another. This is useful if you want to chain commands one after another.
 
 ```bash
-ls -l | less                       # Page through a long directory listing
-cat subjects.txt | grep "sub-0"    # Filter a list of subjects
+$ ls -l | less                       # Page through a long directory listing
+$ cat subjects.txt | grep "sub-0"    # Filter a list of subjects
 ```
 
 You can chain multiple pipes together:
 ```bash
-cat logfile.txt | grep "error" | wc -l    # Count how many lines contain "error"
+$ cat logfile.txt | grep "error" | wc -l    # Count how many lines contain "error"
 ```
 So this line passes the entire contents of `logfile.txt` into `grep`, where it looks for all the lines that contain the word `error`, then passes those lines to `wc` where it counts the number of lines it was passed.
 
@@ -258,8 +258,8 @@ So this line passes the entire contents of `logfile.txt` into `grep`, where it l
 ### Redirections `>` and `>>`
 Often when you are running a command or script, you want the output to be saved into a file instead of printing to the terminal. You can do this with `>` and `>>`. The difference between the two is that `>` will overwrite existing files whereas `>>` will append to an existing file.
 ```bash
-ls -l > filelist.txt          # Save output (overwrites existing file)
-ls -l >> filelist.txt         # Append output to existing file
+$ ls -l > filelist.txt          # Save output (overwrites existing file)
+$ ls -l >> filelist.txt         # Append output to existing file
 ```
 !!! Note
     When you redirect the output, it will no longer print to the terminal, but directly to the new location. So it might appear like the command didn't do anything. So you will need to check the contents of the output file.
@@ -280,8 +280,8 @@ The `>` redirection works like `1>`, meaning "redirect the output of `1` (standa
 If we also want to redirect the error outputs, we can use `2>`.
 
 ```bash
-./my_script.sh > output.txt 2> errors.txt     # Save output and errors separately
-./my_script.sh > output.txt 2>&1              # Combine both into one file
+$ ./my_script.sh > output.txt 2> errors.txt     # Save output and errors separately
+$ ./my_script.sh > output.txt 2>&1              # Combine both into one file
 ```
 In the second example, the `2>&1` means to redirect `2` to wherever `1` is being directed. So in this case, it means to save both to the same `output.txt` file.
 
@@ -289,7 +289,7 @@ In the second example, the `2>&1` means to redirect `2` to wherever `1` is being
 ## File permissions
 Every file and directory has permissions controlling who can read, write, or execute it. You can view these permissions with `ls -l`
 ```bash
-ls -l
+$ ls -l
 ```
 
 Output:
@@ -311,10 +311,10 @@ This means that this is a file (starts with `-`). Where the owner has full read,
 ### Changing permissions with `chmod`
 The owner of a file can change its permissions with `chmod`. Here are a few examples:
 ```bash
-chmod +x my_script.sh          # Make a script executable
-chmod -w file.txt              # Remove write permission (protect a file)
-chmod 755 my_script.sh         # rwxr-xr-x — owner full, others read/execute
-chmod 644 file.txt             # rw-r--r-- — owner read/write, others read only
+$ chmod +x my_script.sh          # Make a script executable
+$ chmod -w file.txt              # Remove write permission (protect a file)
+$ chmod 755 my_script.sh         # rwxr-xr-x — owner full, others read/execute
+$ chmod 644 file.txt             # rw-r--r-- — owner read/write, others read only
 ```
 You can either change a single permission (`+` or `-` to add/remove a permission) for yourself, or use a three digit number to specify the owner, group and others permissions.
 
@@ -338,7 +338,7 @@ Sometimes you need to edit a file directly in the terminal, for example modifyin
 
 It is pretty easy to open a file in nano
 ```bash
-nano myfile.txt
+$ nano myfile.txt
 ```
 It will behave a little bit like a regular document, however you need to use your keyboard to navigate (you can't use your mouse).
 
@@ -357,7 +357,7 @@ Here are some of the `nano` shortcuts.
 ### Vim (powerful, but steep learning curve)
 `vim` is available on almost every Unix system. 
 ```bash
-vim myfile.txt
+$ vim myfile.txt
 ```
 
 `vim` has two modes: Normal (for navigation and commands) and Insert (for typing text). This makes it very unintuitive to use for beginners. However it becomes very powerful for editing text if you spend time getting to know it. It would need a whole separate tutorial on its own. But here are a few of the common commands
@@ -382,9 +382,9 @@ vim myfile.txt
 ## Helpful additional commands
 ### History and shortcuts
 ```bash
-history                  # Show previous commands
-!!                       # Repeat the last command
-!grep                    # Repeat the last command starting with "grep"
+$ history                  # Show previous commands
+$ !!                       # Repeat the last command
+$ !grep                    # Repeat the last command starting with "grep"
 Ctrl + R                 # Search through command history interactively
 Ctrl + C                 # Cancel a running command
 Ctrl + L                 # Clear the terminal screen (same as `clear`)
@@ -394,15 +394,15 @@ Ctrl + E                 # Jump to end of line
 
 ### Disk usage
 ```bash
-df -h                        # Show free disk space on all drives
-du -sh /data/subs/   # Show total size of a directory
-du -sh /data/*/              # Show size of each subdirectory
+$ df -h                        # Show free disk space on all drives
+$ du -sh /data/subs/   # Show total size of a directory
+$ du -sh /data/*/              # Show size of each subdirectory
 ```
 
 ### Processes
 ```bash
-top                      # Live view of running processes (press Q to quit)
-htop                     # Nicer version of top (may need installing)
-ps aux | grep my_script  # Check if a script is running
-kill 12345               # Stop a process by its ID
+$ top                      # Live view of running processes (press Q to quit)
+$ htop                     # Nicer version of top (may need installing)
+$ ps aux | grep my_script  # Check if a script is running
+$ kill 12345               # Stop a process by its ID
 ```

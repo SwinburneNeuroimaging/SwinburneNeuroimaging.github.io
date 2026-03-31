@@ -8,10 +8,10 @@ In shell scripting, the `echo` command is the command to print to the terminal, 
 
 Create a new file ending in `.sh` using a text editor:
 ```bash
-nano my_script.sh
+$ nano my_script.sh
 ```
 Then type the following:
-```bash
+```bash linenums="1"
 #!/bin/bash
 
 echo "Hello, world!"
@@ -24,15 +24,15 @@ Save and exit from `nano` (`Crtl + O`, then `Ctrl + X`).
 ### Giving executable permissions
 Next we need to make the script *executable*, which involves changing its permissions.
 ```bash
-chmod +x my_script.sh
+$ chmod +x my_script.sh
 ```
 This gives all users executable permissions for this file.
 
 ### Running the script
 Now run the script
 ```bash
-./my_script.sh         # Runs in separate sub-shell (variable changes are lost)    
-source my_script.sh    # Runs in current shell (variable changes persist)
+$ ./my_script.sh         # Runs in separate sub-shell (variable changes are lost)    
+$ source my_script.sh    # Runs in current shell (variable changes persist)
 ```
 You should see (modified to your current date)
 ```
@@ -47,7 +47,7 @@ Today is: Mon Mar 30 10:00:00 AEDT 2026
 
 ## Variables
 Variables let you store values and reuse them throughout your script. You define a variable with `=` (no spaces around it) and access its value with `$`.
-```bash
+```bash linenums="1"
 #!/bin/bash
 
 subject="sub-01"
@@ -62,7 +62,7 @@ echo "Data is in $data_dir/$subject"
     Unlike Python, spaces in Shell scripting is very important. You can break a script by having a space it the wrong place. So pay attention to where spaces are and are not needed.
 
 You can also store the output of a command in a variable using `$()`:
-```bash
+```bash linenums="1"
 #!/bin/bash
 
 current_date=$(date)
@@ -78,7 +78,7 @@ echo "Found $num_files files"
 Loops let you repeat a block of commands multiple times, for example, running the same analysis on every participant.
 
 ### Loop over a list
-```bash
+```bash linenums="1"
 #!/bin/bash
 
 for subject in sub-01 sub-02 sub-03 sub-04; do
@@ -89,7 +89,7 @@ done
 ### Loop over files matching a pattern
 If you are familar with how wildcards work ([see here to learn about them](../linux_command_line_basics/#wildcards)), we can use wildcards to match patterns in files and directories and loop over them.
 
-```bash
+```bash linenums="1"
 #!/bin/bash
 
 for scan in /data/raw/*.nii.gz; do
@@ -98,7 +98,7 @@ done
 ```
 
 ### Loop over all directories
-```bash
+```bash linenums="1"
 #!/bin/bash
 
 for subject_dir in /data/sub-*/; do
@@ -112,7 +112,7 @@ Here `basename` strips the directory path and gives you just the folder name, e.
 Conditionals let your script make decisions, for example, skipping a participant if their output already exists.
 
 ### Checking files exist
-```bash
+```bash linenums="1" hl_lines="6-10"
 #!/bin/bash
 
 subject="sub-01"
@@ -139,7 +139,7 @@ The `-f` flag checks whether a file exists. Here are the most useful test flags:
 
 ### Comparing values
 You can also compare values:
-```bash
+```bash linenums="1"
 if [ "$subject" == "sub-01" ]; then
     echo "This is the first subject"
 fi
@@ -154,7 +154,7 @@ Use `-gt` (greater than), `-lt` (less than), `-eq` (equal to) and `-ne` (not equ
 ## Command line arguments
 Rather than hardcoding values in your script, you can pass them in when you run it. Inside the script, `$1` is the first argument, `$2` is the second, and so on.
 
-```bash
+```bash linenums="1"
 #!/bin/bash
 
 subject=$1
@@ -165,12 +165,12 @@ echo "Processing $subject $session"
 
 Then you can run it like this:
 ```bash
-./my_script.sh sub-01 ses-01
+$ ./my_script.sh sub-01 ses-01
 ```
 
 
 It can be good practice to check that required arguments were actually given:
-```bash
+```bash linenums="1" hl_lines="3-6"
 #!/bin/bash
 
 if [ -z "$1" ]; then
@@ -187,7 +187,7 @@ Here we are checking that `$1` is not an empty string (`-z`), if it is, we print
 ## Functions
 Functions let you group a set of commands together and call them by name. This is useful for avoiding repetition in longer scripts.
 
-```bash
+```bash linenums="1"
 #!/bin/bash
 
 process_subject() {
