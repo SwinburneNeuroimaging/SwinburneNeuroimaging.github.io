@@ -8,9 +8,10 @@
 ## Neurodesk Tutorials
 - [Setting up Neurodesk](./neurodesk/setting_up_neurodesk.md)
 - [Opening a Terminal on Neurodesk](./neurodesk/neurodesk_terminal.md)
-- [Connect Neurodesk to OzSTAR](./neurodesk/connect_neurodesk_to_ozstar.md)
+- [Connect Neurodesk to OzSTAR/NT](./neurodesk/connect_neurodesk_to_ozstar.md)
 
 ## Supercomputing Tutorials
-- [Creating an OzSTAR Account](./supercomputing/create_ozstar_account.md)
-- [Accessing OzSTAR](./supercomputing/accessing_ozstar.md)
-- [Submitting Jobs to OzSTAR](./supercomputing/submitting_jobs_to_ozstar.md)
+- [Creating an OzSTAR/NT Account](./supercomputing/create_ozstar_account.md)
+- [Accessing OzSTAR/NT](./supercomputing/accessing_ozstar.md)
+- [Submitting Jobs to OzSTAR/NT](./supercomputing/submitting_jobs_to_ozstar.md)
+- [Containers on OzSTAR/NT](./supercomputing/containers_on_ozstar.md)

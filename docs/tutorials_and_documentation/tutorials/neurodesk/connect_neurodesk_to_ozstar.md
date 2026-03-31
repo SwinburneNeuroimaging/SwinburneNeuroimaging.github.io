@@ -1,4 +1,4 @@
-# Connect Neurodesk to OzSTAR
+# Connect Neurodesk to OzSTAR/NT
 
 Once you have Neurodesk running (via any method), you'll can establish a connection to OzSTAR to access your project files and run computations.
 

@@ -1,4 +1,4 @@
-# Create an OzSTAR Account
+# Create an OzSTAR/NT Account
 OzSTAR is [Swinburne's Supercomputer](https://supercomputing.swin.edu.au/), a powerful machine designed to help Australian researchers analyse large amounts of data and run complex calculations that would be impossible on a regular computer or laptop. 
 
 !!! info "What is OzSTAR?"

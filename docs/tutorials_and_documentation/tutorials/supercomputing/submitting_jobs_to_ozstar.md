@@ -1,4 +1,4 @@
-# Submitting Jobs to OzSTAR
+# Submitting Jobs to OzSTAR/NT
 
 OzSTAR is Swinburne's supercomputer. Rather than running commands directly in the terminal, you submit *jobs* — instructions describing what you want the computer to do and what resources you need to do it. OzSTAR then queues and runs your job when the requested resources become available.
 
