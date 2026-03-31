@@ -1,4 +1,4 @@
-# External Guides and Docs
+# External Guides and Documentation
 
 NOTE: Most channels below have the videos divided into playlists for easy navigation
 

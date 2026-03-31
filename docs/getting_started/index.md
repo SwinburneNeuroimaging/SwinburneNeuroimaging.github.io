@@ -11,7 +11,7 @@ flowchart LR
 
 ```
 
-## Step 1 — Get in touch!
+## Step 1: Get in touch!
 We can support you at all stages of your research, including:
 
 - Project conception and design
@@ -29,7 +29,7 @@ Email us to start the conversation: [neuroimaging@swinburne.edu.au](mailto:neuro
     That's fine, send us a brief description of your research question and we'll suggest the most appropriate modality and workflow.
 
 
-## Step 2 — Submit your application
+## Step 2: Submit your application
 Once you've spoken with the team, you'll be directed to our online application form. The form covers:
 
 - [EEG & TMS project application form](https://swinburneuniversity-2.snapforms.com.au/form/sni-project-application-eeg-and-tms)
@@ -44,29 +44,10 @@ Once you've spoken with the team, you'll be directed to our online application f
     - Study protocol information*
     - Funding information
 
+## Step 3: Setting up OzSTAR Supercomputing
+After you have setup a project with us, you can follow these tutorials to set up you OzSTAR/NT supercomputer access.
 
-
-
-## Setting up OzSTAR Supercomputing
-
-
-
-## Tutorial Overview
-
-To use Swinburne Neuroimaging's resources, you'll need to complete the following steps:
-
-1. [Create an OzSTAR account](/Getting Started/step_1_create_an_ozstar_account/)
-2. [Join (or create) an OzSTAR project](/Getting Started/step_2_join_or_create_an_ozstar_project/)
-3. [Set up Neurodesk](/Getting Started/step_3_set_up_neurodesktop/)
-4. [Connect Neurodesk to OzSTAR](/Getting Started/step_4_connect_neurodesk_to_ozstar/)
-5. Obtain example code and containers # TO DO
-6. Run your analysis on OzSTAR # TO DO
----
-
-## Support
-
-If you encounter any issues during this tutorial, please contact
-
-- **Swinburne Neuroimaging support**: [neuroinformatics@swin.edu.au](mailto:neuroinformatics@swin.edu.au)
-
----
+1. [Create an OzSTAR account](../tutorials_and_documentation/tutorials/supercomputing/create_ozstar_account.md)
+2. If you are already part of a project (i.e a student or collaborator of someone elses project) you can [Join an OzSTAR/NT project](../tutorials_and_documentation/tutorials/supercomputing/join_an_ozstar_project.md)
+3. [Set Up Neurodesk](../tutorials_and_documentation/tutorials/neurodesk/setting_up_neurodesk.md)
+4. [Connect Neurodesk to OzSTAR/NT](../tutorials_and_documentation/tutorials/neurodesk/connect_neurodesk_to_ozstar.md)

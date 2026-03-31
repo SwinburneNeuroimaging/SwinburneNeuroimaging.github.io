@@ -12,6 +12,7 @@
 
 ## Supercomputing Tutorials
 - [Creating an OzSTAR/NT Account](./supercomputing/create_ozstar_account.md)
+- [Join an OzSTAR/NT Project](./supercomputing/join_an_ozstar_project.md)
 - [Accessing OzSTAR/NT](./supercomputing/accessing_ozstar.md)
 - [Submitting Jobs to OzSTAR/NT](./supercomputing/submitting_jobs_to_ozstar.md)
 - [Containers on OzSTAR/NT](./supercomputing/containers_on_ozstar.md)
