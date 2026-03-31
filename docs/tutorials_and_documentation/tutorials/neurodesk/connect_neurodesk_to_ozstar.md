@@ -1,6 +1,6 @@
-# Step 4 - Connect Neurodesk to OzSTAR
+# Connect Neurodesk to OzSTAR
 
-Once you have Neurodesk running (via any method), you'll need to establish a connection to OzSTAR to access your project files and run computations.
+Once you have Neurodesk running (via any method), you'll can establish a connection to OzSTAR to access your project files and run computations.
 
 ## Connection Setup
 
@@ -9,7 +9,7 @@ Once you have Neurodesk running (via any method), you'll need to establish a con
 Open a new terminal window in your Neurodesk environment.
 
 !!! info "What is a terminal?"
-    If you don't know how to open a terminal, see [Open a terminal on Neurodesk](/Getting Started/Additional Information/open_a_neurodesk_terminal/).
+    If you don't know how to open a terminal, see [Open a terminal on Neurodesk](/Getting Started/Additional Information/open_a_neurodesk_terminal/). Then you might want to follow the [linux command line basics](../basics/linux_command_line_basics.md) tutorial to get a feel of using a linux terminal.
 
 **Step 2: Download the connection script**
 
@@ -18,6 +18,7 @@ Copy and paste the following command into the terminal and press ENTER:
 ```bash
 cd; curl -o connect_ozstar_user.sh https://raw.githubusercontent.com/SwinburneNeuroimaging/swinburne_tools/main/connect_ozstar_user.sh
 ```
+This downloads a script that Swinburne Neuroimaging has created to help connecting to OzSTAR easier.
 
 **Step 3: Run the connection script**
 
@@ -102,8 +103,3 @@ If you encounter issues during setup or connection:
 
 - **Swinburne Neuroimaging support**: [neuroinformatics@swin.edu.au](mailto:neuroinformatics@swin.edu.au)
 
----
-
-## Next Steps
-
-Once you've successfully connected Neurodesk to OzSTAR, you're ready to obtain example code and containers, and begin running your neuroimaging analysis workflows.

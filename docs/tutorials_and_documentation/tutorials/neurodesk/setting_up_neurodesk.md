@@ -3,11 +3,11 @@
 This guide will walk you through setting up Neurodesk for neuroimaging analysis.
 
 !!! info "What is Neurodesk?"
-    To find out more infomation about Neurodesk, see [What is Neurodesk?](/Getting Started/Additional Information/what_is_neurodesk).
+    To find out more infomation about Neurodesk, see [What is Neurodesk?](../../documentation/what_is_neurodesk.md).
 
 ---
 
-## 3. Setting up Neurodesk
+## Neurodesk
 
 Swinburne Neuroimaging is a partner in creating the Neurodesk analysis platform, an extendible, portable, easy to use desktop environment for cognitive neuroscience data analysis.
 
@@ -33,8 +33,13 @@ The ARDC Virtual Desktop Service provides a cloud-based desktop environment with
 
 2. When creating your desktop, select the **Monash02** NECTAR zone for optimal performance and stable connections to OzSTAR
 
-!!! tip "Why Monash02  NECTAR Zone?"
+!!! Note "Why Monash02  NECTAR Zone?"
     Based on our experience, the Monash02 NECTAR zone provides the most stable connection when accessing OzSTAR resources.
+
+!!! Note "Information from [ARDV VM Support](https://support.ehelp.edu.au/support/solutions/articles/6000253856-nectar-virtual-desktop-service)"
+    Resources: The default resourcing for a desktop is 8 virtual CPU Cores & 16GB RAM. Users will have the option to increase resources if the default is not sufficient for their computing needs. This can be done via the boost function, increasing resources to 16 virtual CPU Cores and 32GB RAM.
+
+    Time: Once a user has started a Virtual Desktop, this desktop will be available for 14 days (with the ability to extend). After 14 days, the desktop will initiate an expiry process, with the instance shelved for 3 months, and then deleted. You will receive email reminders at each stage of the expiry process.
 
 ---
 
@@ -47,6 +52,12 @@ If you prefer to run Neurodesk on your own workstation, complete installation in
 
 ---
 
+## Next Steps
+
+Once you've successfully set up Neurodesk you are now ready to [connect neurodesk to OzSTAR](./connect_neurodesk_to_ozstar.md).
+
+---
+
 ## Support
 
 If you encounter issues during setup, please contact
@@ -55,6 +66,3 @@ If you encounter issues during setup, please contact
 
 ---
 
-## Next Steps
-
-Once you've successfully set up Neurodesk you are now ready to [connect neurodesk to OzSTAR](/Getting Started/step_4_connect_neurodesk_to_ozstar/).
