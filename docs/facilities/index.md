@@ -18,5 +18,11 @@ In addition our electroencephalography machine is Neuroscan high density MEG and
 
 Our neuroimaging research is already creating a real impact on people's lives — and we've barely started.
 
-
 Swinburne Neuroimaging (SNI) houses a range of world-class neuroimaging facilities available to researchers. Each modality offers unique capabilities — explore each below to learn more about the equipment, what research it enables, and how to book time.
+
+## How to access Swinburne Neuroimaging facilities
+
+Swinburne Neuroimaging is as node of the Australian National Imaging Facility and offers open access to Australian researchers from research institutions, clinical and health facilities and industry
+
+For more details about accessing our facilities, please see our web pages:
+[https://www.swinburne.edu.au/neuroimaging](https://www.swinburne.edu.au/neuroimaging)

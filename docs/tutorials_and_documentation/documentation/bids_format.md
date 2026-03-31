@@ -1,4 +1,4 @@
-# The Brain Imaging Data Structure (BIDS)
+# BIDS - Brain Imaging Data Structure 
 The Brain Imaging Data Structure (BIDS) is a method for organising and formating neuroimaging data.
 
 You can find out more information about BIDS at [https://bids.neuroimaging.io/](https://bids.neuroimaging.io/)
