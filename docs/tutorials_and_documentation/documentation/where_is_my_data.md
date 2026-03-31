@@ -1,6 +1,6 @@
 # Where is my Data?
 
-All of the data is on OzSTAR/NT, Swinburne's Supercomputer. It is stored in one of three locations depending on what it is and how it is being used.
+All of the data is on Swinburne's Supercomputer called [OzSTAR/NT](./what_is_ozstar.md). It is stored in one of three locations depending on what it is and how it is being used.
 
 | Location | Path | Use for |
 |----------|------|---------|
@@ -39,5 +39,3 @@ SNI maintains a shared directory accessible to all OzSTAR users. This is where y
 $ cd /dagg/public/neuro
 ```
 This directory is read-only for most users, you cannot save your own data here. See the [containers on OzSTAR page](../tutorials/supercomputing/containers_on_ozstar.md) for more detail on what is available here and how to use it.
-
-## Summary
