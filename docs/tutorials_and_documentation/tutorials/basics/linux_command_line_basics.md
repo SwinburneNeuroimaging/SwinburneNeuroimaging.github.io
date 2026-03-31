@@ -385,17 +385,17 @@ $ vim myfile.txt
 $ history                  # Show previous commands
 $ !!                       # Repeat the last command
 $ !grep                    # Repeat the last command starting with "grep"
-Ctrl + R                 # Search through command history interactively
-Ctrl + C                 # Cancel a running command
-Ctrl + L                 # Clear the terminal screen (same as `clear`)
-Ctrl + A                 # Jump to start of line
-Ctrl + E                 # Jump to end of line
+Ctrl + R                   # Search through command history interactively
+Ctrl + C                   # Cancel a running command
+Ctrl + L                   # Clear the terminal screen (same as `clear`)
+Ctrl + A                   # Jump to start of line
+Ctrl + E                   # Jump to end of line
 ```
 
 ### Disk usage
 ```bash
 $ df -h                        # Show free disk space on all drives
-$ du -sh /data/subs/   # Show total size of a directory
+$ du -sh /data/subs/           # Show total size of a directory
 $ du -sh /data/*/              # Show size of each subdirectory
 ```
 
