@@ -1,4 +1,4 @@
-# Setting up Neurodesk
+# Setting Up Neurodesk
 
 This guide will walk you through setting up Neurodesk for neuroimaging analysis.
 

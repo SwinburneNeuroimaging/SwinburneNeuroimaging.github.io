@@ -1,4 +1,4 @@
-# Submitting jobs to OzSTAR
+# Submitting Jobs to OzSTAR
 
 OzSTAR is Swinburne's supercomputer. Rather than running commands directly in the terminal, you submit *jobs* — instructions describing what you want the computer to do and what resources you need to do it. OzSTAR then queues and runs your job when the requested resources become available.
 
@@ -9,7 +9,7 @@ Jobs are submitted using **Slurm**, a job scheduling system used by many superco
 
 ## What is a job script?
 This is an example job script:
-```bash
+```bash linenums="1"
 #!/bin/bash                                    # Shebang, defines which interpreter to use
 
 #SBATCH -J my_job                              # Job name (change to something meaningful)
@@ -51,7 +51,7 @@ In the log file paths, `%j` is automatically replaced by Slurm with the job's un
 Once your script is ready, submit it from the terminal with `sbatch`:
 
 ```bash
-sbatch my_job_script.sh
+$ sbatch my_job_script.sh
 ```
 
 If the submission is successful, you will see:
@@ -78,6 +78,6 @@ You can monitor your job using the [OzSTAR job monitor](https://supercomputing.s
 You can also check from the terminal:
 
 ```bash
-squeue --me              # Show all your currently running or pending jobs
-sacct -j 99999999        # Show details for a specific job ID
+$ squeue --me              # Show all your currently running or pending jobs
+$ sacct -j 99999999        # Show details for a specific job ID
 ```
