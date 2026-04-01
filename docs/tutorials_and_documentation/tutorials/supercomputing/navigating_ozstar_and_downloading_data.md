@@ -37,6 +37,8 @@ The files on your local computer will be shown on the left and files on the supe
 
 You can transfer files between local computer to the supercomputer by drag and drop from the left and right sides of the screen (the blue and yellow regions in the above image).
 
+To locate your data, change the Remote Site (top of yellow region) to `/fred/ozXXX/` where `ozXXX` is your OzSTAR/NT project number.
+
 !!! warning
     Files can be dragged between the local and supercomputers by dragging files from the left side of the screen to the right side of the screen (and vice versa). **Dragging files from one side to the other side only copies files between the computers and does not move them**. 
 

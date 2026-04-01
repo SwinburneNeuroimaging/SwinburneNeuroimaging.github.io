@@ -1,13 +1,16 @@
-# Submitting Jobs to OzSTAR/NT
+# Submitting Jobs to the Supercomputer
 
 OzSTAR is Swinburne's supercomputer. Rather than running commands directly in the terminal, you submit *jobs* — instructions describing what you want the computer to do and what resources you need to do it. OzSTAR then queues and runs your job when the requested resources become available.
 
 Jobs are submitted using **Slurm**, a job scheduling system used by many supercomputers. This guide covers the basics of writing and submitting a Slurm job script. Keep in mind that every project is different, you will need to adjust the parameters to suit your own data and software.
 
-!!! tip
+!!! info
     A more complete reference for creating and submitting jobs can be found in the [OzSTAR documentation](https://supercomputing.swin.edu.au/docs/2-ozstar/oz-slurm-create.html). You can also access the full `sbatch` manual by typing `man sbatch` in the terminal after logging in to OzSTAR.
 
 ## What is a job script?
+!!! tip
+    If you don't know what a shell script is, follow our [shell scripting basics](../basics/shell_scripting_basics.md) tutorial first then come back. A job script is a very simple shell script.
+
 This is an example job script:
 ```bash linenums="1"
 #!/bin/bash                                    # Shebang, defines which interpreter to use
@@ -38,7 +41,7 @@ A job script is a shell script (a `.sh` file) with two parts:
 1. **`#SBATCH` directives** — lines at the top of the script that tell Slurm what resources to request (time, memory, CPUs, etc.)
 2. **The commands to run** — the actual analysis or software you want to execute
 
-The `#SBATCH` lines look like comments to the shell, but Slurm reads them as instructions before running your script.
+The `#SBATCH` lines look like comments to the shell, but Slurm reads them as instructions before running your script. 
 
 !!! warning
     The log directory (e.g. `log/`) must already exist before you submit the job. Slurm will not create it for you. Run `mkdir -p /path/to/project/log` beforehand if needed.

@@ -55,11 +55,22 @@ When you connect, you will land on one of the login nodes:
 | OzSTAR | `farnarkle1`, `farnarkle2` |
 | NT | `tooarrana1`, `tooarrana2` |
  
-This is where your home directory will be on OzSTAR or NT. This is usually `/home/Username/`. You can do *light* calculations and commands here.
+This is where your home directory will be on OzSTAR or NT. This is usually `/home/Username/`. You can do *light* calculations and commands here. 
 
 !!! warning
     Login nodes are shared by all users and are intended for light tasks only, file management, writing scripts, and submitting jobs. Do not run computationally intensive work directly on a login node. Use the job submission system instead. To learn how to submit a job, read our [Submitting Jobs to OzSTAR/NT](./submitting_jobs_to_ozstar.md) tutorial.
 
+### Data location: `/fred/ozXXX/`
+Your project data will be located at `/fred/ozXXX/` where `ozXXX` is your OzSTAR/NT project number.
+```bash
+$ cd /fred/ozXXX/
+```
+We recommend creating a symlink (a shortcut) from your home directory to your project data directory.
+```bash
+$ cd ~                        # Make sure you are in your home directory
+$ ln -s /fred/ozXXX/ ozXXX    # ozXXX is your project number
+```
+You should now find a new file in your home directory called `ozXXX`. You can `$ cd ozXXX` to get directly to your project data.
 
 ## Transferring files with FileZilla
  
@@ -67,7 +78,7 @@ If you prefer a graphical interface for accessing and downloading data, [FileZil
  
 See the [Nagivating the supercomputer and downloading data](../supercomputing/navigating_ozstar_and_downloading_data.md) guide for detailed instructions on how to install and connect FileZilla to OzSTAR.
  
-Your project data will be located at `/fred/ozXXX` on the remote server.
+Remember to change the Remote site to `/fred/ozXXX` to see your data.
 
 ## Submitting jobs
  
