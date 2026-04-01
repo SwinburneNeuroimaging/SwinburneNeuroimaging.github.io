@@ -1,4 +1,4 @@
-# Getting Started with SNI Resources
+# Start a Project with SNI
 
 Welcome to the Swinburne Neuroimaging resources guide. This documentation will walk you through the process of contacting us, setting up accounts and accessing high-performance computing resources for neuroimaging research.
 

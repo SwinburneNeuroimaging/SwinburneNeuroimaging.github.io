@@ -2,13 +2,6 @@
 
 ![IMAGE OF MEG MACHINE](../assets/images/facilities/sni_meg.jpeg)
 
-![IMAGE OF MEG OUTPUTS]
-
-!!! info "What is MEG?"
-    INFO ABOUT MEG
-
-
-
 MEG’s temporal precision is important as it lets us investigate single, rapid processes. This is crucial when we’re looking at the timing of thousands of coordinated processes.
 
 These steps must occur in exactly the right sequence for normal brain function.

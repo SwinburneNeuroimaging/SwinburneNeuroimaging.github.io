@@ -35,4 +35,4 @@ If you're part of an established research group that already has an OzSTAR/NT pr
 
 ## Option 2: Starting a new project
 
-If you're a research group leader or principal investigator, and you are looking to start a new project, we can create you own project. However, you will need to contact Swinburne Neuroimaging first ([neuroimaging@swin.edu.au](mailto:neuroimaging@swin.edu.au)). You can find information about how to set up a project with us in [Getting Started](../../../getting_started/index.md).
+If you're a research group leader or principal investigator, and you are looking to start a new project, we can create you own project. However, you will need to contact Swinburne Neuroimaging first ([neuroimaging@swin.edu.au](mailto:neuroimaging@swin.edu.au)). You can find information about how to set up a project with us in [Start_a_project](../../../start_a_project/index.md).
