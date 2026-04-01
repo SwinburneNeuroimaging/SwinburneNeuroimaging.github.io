@@ -73,12 +73,12 @@ To transfer a file or folder, simply drag it from one panel to the other. You ca
 ### Using SSH keys with FileZilla
 If you have set up SSH keys (see the section below), you can configure FileZilla to use them instead of a password. Go to **Edit → Settings → Connection → SFTP** and add your private key file (`~/.ssh/id_ed25519`). FileZilla will then authenticate automatically without needing a password each time.
 
-For a more complete walkthrough including screenshots, [see the full FileZilla setup guide](https://github.com/user-attachments/files/25403981/Navigating.Projects.Folders.on.the.Supercomputer.and.Downloading.Project.Data.pdf).
+For a more complete walkthrough including screenshots, [see the full FileZilla setup guide](../supercomputing/navigating_ozstar_and_downloading_data.md).
 
-## SSH Keys - passwordless login
+## SSH Keys: passwordless login
 Typing your password every time you connect can get tedious. SSH keys allow you to authenticate automatically without a password, whilst still being secure. They work as a pair: a private key that stays on your local machine, and a public key that you place on the remote server.
 
-### Step 1 - Generate a key pair
+### Step 1: Generate a key pair
 ```bash
 $ ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
@@ -87,7 +87,7 @@ You will be asked where to save the key (press Enter to accept the default) and 
 !!! Note
     Setting a passphrase makes the connection extra secure as a person would need to have access to both your ssh key and you passphrase to login (basically two-factor authentication).
 
-### Step 2 — Copy your public key to the server
+### Step 2: Copy your public key to the server
 ```bash
 $ ssh-copy-id username@hostname
 ```
@@ -100,7 +100,7 @@ $ ssh-copy-id username@nt.swin.edu.au
 
 You will be asked for your password one last time. After this, SSH will use your key instead (and potentially ask you for you passphrase if you set one).
 
-### Step 3 - Login without a password
+### Step 3: Login without a password
 ```bash
 $ ssh username@hostname
 ```

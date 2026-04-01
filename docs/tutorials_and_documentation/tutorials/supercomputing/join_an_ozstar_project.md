@@ -1,8 +1,8 @@
-# Join or Create an OzSTAR/NT Project
+# Join an OzSTAR/NT Project
 
 ## What is a Project?
 
-A project on OzSTAR represents a research group or a colelction of people using the same datasets. Projects are used for:
+A project on OzSTAR/NT represents a research group or a colelction of people using the same datasets. Projects are used for:
 
 - **Management and reporting**: Organising users by research group
 - **File system quotas**: Allocating shared disk space on the `/fred` file system
@@ -12,13 +12,13 @@ When you join a project, you'll gain access to a shared project directory at `/f
 
 ---
 
-## Option A: Joining an Existing Project
+## Option 1: Joining an existing project
 
-If you're part of an established research group that already has an OzSTAR project, follow these steps:
+If you're part of an established research group that already has an OzSTAR/NT project, follow these steps:
 
 1. **Contact the project leader first**
     
-    Before submitting a request, contact your supervisor or project leader to inform them you'll be requesting access.
+    Before submitting a request, contact the project leader to inform them you'll be requesting access.
 
 2. **Submit a join request**
     
@@ -30,9 +30,9 @@ If you're part of an established research group that already has an OzSTAR proje
 
 4. **Access your project directory**
     
-    After approval, you'll automatically be added to the project group and gain access to the shared project directory at `/fred/your-project-id`.
+    After approval, you'll automatically be added to the project group and gain access to the shared project directory at `/fred/ozXXX` (`ozXXX`) being your OzSTAR/NT project id.
 
 
-## Option B: Creating a New Project
+## Option 2: Starting a new project
 
-If you're a research group leader or principal investigator setting up a new group, you can create your own project, however you will need to contact Swinburne Neuroimaging first. You can find information about how to set up a project with us in [Getting Started](../../../getting_started/index.md).
+If you're a research group leader or principal investigator, and you are looking to start a new project, we can create you own project. However, you will need to contact Swinburne Neuroimaging first ([neuroimaging@swin.edu.au](mailto:neuroimaging@swin.edu.au)). You can find information about how to set up a project with us in [Getting Started](../../../getting_started/index.md).

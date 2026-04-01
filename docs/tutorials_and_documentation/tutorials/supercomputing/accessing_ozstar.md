@@ -1,6 +1,6 @@
-# Accessing OzSTAR/NT
+# Accessing the Supercomputer
 
-OzSTAR is [Swinburne's Supercomputer](https://supercomputing.swin.edu.au/), a powerful machine designed to help Australian researchers analyse large amounts of data and run complex calculations that would be impossible on a regular computer or laptop. 
+OzSTAR and NT are [Swinburne's two supercomputers](https://supercomputing.swin.edu.au/), they are powerful linked machines designed to help Australian researchers analyse large amounts of data and run complex calculations that would be impossible on a regular computer or laptop. 
 
 To access neuroimaging data (MRI/DICOM, MEG/FIF) or your study requires supercomputing resources for data analysis, such as running analysis using Freesurfer, MRTrix, fMRIPrep, mne-python pipelines, then the following information/instructions might be helpful.
 
@@ -65,7 +65,7 @@ This is where your home directory will be on OzSTAR or NT. This is usually `/hom
  
 If you prefer a graphical interface for accessing and downloading data, [FileZilla](https://filezilla-project.org/) is a free file transfer program that connects to OzSTAR/NT over SSH. You can drag and drop files between your local machine and OzSTAR without using the command line.
  
-See the [FileZilla setup guide](https://github.com/user-attachments/files/25403981/Navigating.Projects.Folders.on.the.Supercomputer.and.Downloading.Project.Data.pdf) for detailed instructions on how to install and connect FileZilla to OzSTAR.
+See the [Nagivating the supercomputer and downloading data](../supercomputing/navigating_ozstar_and_downloading_data.md) guide for detailed instructions on how to install and connect FileZilla to OzSTAR.
  
 Your project data will be located at `/fred/ozXXX` on the remote server.
 
