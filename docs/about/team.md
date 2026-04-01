@@ -7,25 +7,25 @@ Director, Swinburne Neuroimaging Facility
 </div>
 
 <div class="team-card" markdown>
-![Rachel Oliver (Batty)](../assets/team/rachel-oliver.jpg)
+![Rachel Oliver (Batty)](../assets/team/blank-avatar.jpg)
 **Rachel Oliver (Batty)**
 Operations Manager, Swinburne Neuroimaging Facility
 </div>
 
 <div class="team-card" markdown>
-![Annalaise Takla](../assets/team/annalaise-takla.jpg)
+![Annalaise Takla](../assets/team/blank-avatar.jpg)
 **Annalaise Takla**
 Senior MRI Radiographer
 </div>
 
 <div class="team-card" markdown>
-![Catherine Mandel](../assets/team/catherine-mandel.jpg)
+![Catherine Mandel](../assets/team/blank-avatar.jpg)
 **Catherine Mandel**
 MRI Radiologist
 </div>
 
 <div class="team-card" markdown>
-![Rory Knight-Sadler](../assets/team/rory-knight-sadler.jpg)
+![Rory Knight-Sadler](../assets/team/blank-avatar.jpg)
 **Rory Knight-Sadler**
 MEG Technician
 </div>
@@ -55,17 +55,11 @@ Neuroinformatics Fellow
 </div>
 
 
-
-
-
-
 </div>
 
 ---
 
-## Bookings & support
+## Contact & support
+Whether you’re a PhD student, media, or an organisation looking to access our facility or partner with us, or if you're not sure who to contact, please contact Dr Rachel Oliver (Batty), Operations Manager on +61 3 9214 8006 or via [neuroimaging@swinburne.edu.au](mailto:neuroimaging@swinburne.edu.au).
 
-| Query | Contact |
-|-------|---------|
-| Swinburne Neuroimaging | [neuroimaging@swin.edu.au](mailto:neuroimaging@swin.edu.au) |
-| Neuroinformatics | [neuroinformatics@swin.edu.au](mailto:neuroinformatics@swin.edu.au) |
+For technical issues with OzSTAR/NT, Neurodesk, or any other computing and informatics problems, email [neuroinformatics@swin.edu.au](mailto:neuroinformatics@swin.edu.au).

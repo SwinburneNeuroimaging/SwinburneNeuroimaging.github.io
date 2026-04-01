@@ -9,7 +9,7 @@ Once you have Neurodesk running (via any method), you'll can establish a connect
 Open a new terminal window in your Neurodesk environment.
 
 !!! info "What is a terminal?"
-    If you don't know how to open a terminal, see [Open a terminal on Neurodesk](/Getting Started/Additional Information/open_a_neurodesk_terminal/). Then you might want to follow the [linux command line basics](../basics/linux_command_line_basics.md) tutorial to get a feel of using a linux terminal.
+    If you don't know how to open a terminal, see [Open a terminal on Neurodesk](./neurodesk_terminal.md). Then you might want to follow the [linux command line basics](../basics/linux_command_line_basics.md) tutorial to get a feel of using a linux terminal.
 
 **Step 2: Download the connection script**
 

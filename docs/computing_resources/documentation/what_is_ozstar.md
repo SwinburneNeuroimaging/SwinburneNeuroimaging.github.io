@@ -1,6 +1,6 @@
 # What is OzSTAR?
 
-OzSTAR is [Swinburne's Supercomputer](https://supercomputing.swin.edu.au/)—a powerful machine designed to help Australian researchers analyse large amounts of data and run complex calculations that would be impossible on a regular computer or laptop. It's actually made up of two linked supercomputers called 'OzSTAR' and 'Ngarrgu Tindebeek' (NT for short), though most people just call the whole thing "OzSTAR".
+OzSTAR is [Swinburne's Supercomputer](https://supercomputing.swin.edu.au/), a powerful machine designed to help Australian researchers analyse large amounts of data and run complex calculations that would be impossible on a regular computer or laptop. It is actually made up of two linked supercomputers called 'OzSTAR' and 'Ngarrgu Tindebeek' (NT for short), though most people just call the whole thing "OzSTAR".
 
 ---
 
@@ -53,6 +53,9 @@ OzSTAR supercomputing consists of **two** supercomputers: the older "OzSTAR" and
     - **GPUs**: Specialised processors excellent for certain types of calculations (especially machine learning and image processing)
     - **Local SSD/NVMe**: Fast temporary storage on each node
     - **Fabric Interconnect**: The ultra-fast network connecting all the nodes together
+
+!!! note
+    Everything after this might look like an assortment of random letters and numbers if you are unfamilar with high performance computing components. You don't need to know what the supercomputers are made of to use them.
 
 ### [OzSTAR (Installed 2018)](https://supercomputing.swin.edu.au/ozstar)
 

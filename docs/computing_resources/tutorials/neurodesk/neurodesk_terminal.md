@@ -56,6 +56,6 @@ Once your terminal is open:
 
 ## You're Ready!
 
-That's it! You now know how to open a terminal in Neurodesk. You can proceed with the connection instructions in the [Neurodesk setup guide](/Getting Started/setting_up_neurodesktop.md).
+That's it! You now know how to open a terminal in Neurodesk. You can proceed with the connection instructions in the [Neurodesk setup guide](./setting_up_neurodesk.md).
 
 If you need to open additional terminal windows at any time, just click the terminal icon again.

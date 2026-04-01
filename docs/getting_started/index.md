@@ -47,7 +47,7 @@ Once you've spoken with the team, you'll be directed to our online application f
 ## Step 3: Setting up OzSTAR Supercomputing
 After you have setup a project with us, you can follow these tutorials to set up you OzSTAR/NT supercomputer access.
 
-1. [Create an OzSTAR account](../tutorials_and_documentation/tutorials/supercomputing/create_ozstar_account.md)
-2. If you are already part of a project (i.e a student or collaborator of someone elses project) you can [Join an OzSTAR/NT project](../tutorials_and_documentation/tutorials/supercomputing/join_an_ozstar_project.md)
-3. [Set Up Neurodesk](../tutorials_and_documentation/tutorials/neurodesk/setting_up_neurodesk.md)
-4. [Connect Neurodesk to OzSTAR/NT](../tutorials_and_documentation/tutorials/neurodesk/connect_neurodesk_to_ozstar.md)
+1. [Create an OzSTAR account](../computing_resources/tutorials/supercomputing/create_ozstar_account.md)
+2. If you are already part of a project (i.e a student or collaborator of someone elses project) you can [Join an OzSTAR/NT project](../computing_resources/tutorials/supercomputing/join_an_ozstar_project.md)
+3. [Set Up Neurodesk](../computing_resources/tutorials/neurodesk/setting_up_neurodesk.md)
+4. [Connect Neurodesk to OzSTAR/NT](../computing_resources/tutorials/neurodesk/connect_neurodesk_to_ozstar.md)

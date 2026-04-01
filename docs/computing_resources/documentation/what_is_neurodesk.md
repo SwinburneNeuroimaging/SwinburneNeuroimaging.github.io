@@ -16,6 +16,7 @@ Neurodesk provides a graphical desktop environment called *Neurodesktop*, access
 The recommended way to use Neurodesk is via the ARDC Nectar Virtual Desktop, with your OzSTAR project storage mounted directly to the virtual machine. This gives you access to the full Neurodesk graphical environment through your browser, while keeping your data on OzSTAR where it can also be used for large-scale job submissions.
 
 This approach means you can:
+
 - Use Neurodesk's graphical tools interactively without installing anything on your local computer
 - Access your project data on OzSTAR directly from within Neurodesk
 - Move seamlessly between interactive analysis in Neurodesk and batch processing on OzSTAR

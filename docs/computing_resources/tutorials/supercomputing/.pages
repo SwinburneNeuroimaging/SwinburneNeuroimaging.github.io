@@ -1,0 +1,4 @@
+# docs/computing_resources/tutorials/supercomputing/.pages
+nav:
+  - create_ozstar_account.md
+  - ...

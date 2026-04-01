@@ -3,13 +3,6 @@ The Brain Imaging Data Structure (BIDS) is a method for organising and formating
 
 You can find out more information about BIDS at [https://bids.neuroimaging.io/](https://bids.neuroimaging.io/)
 
-
-!!! info "Why use BIDS?"
-
-
-
-
-
 At Swinburne Neuroimaging we seek to convert our raw MRI, MEG and EEG to BIDS format.
 
 We have templates to help users get data from their projects in our facility into BIDS format to facilitate standardised analyses and data sharing (please reach out to neuroinformatics@swin.edu.au). 

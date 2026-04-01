@@ -1,5 +1,5 @@
 site_name: Swinburne Neuroimaging Documentation
-site_url: https://SwinburneNeuroimaging.github.io.github.io/
+site_url: https://SwinburneNeuroimaging.github.io/
 theme:
   name: material
   font:
@@ -80,10 +80,12 @@ markdown_extensions:
   - pymdownx.details
   - md_in_html
 
-# nav:
-#     - Home: index.md
-#     - Getting Started:
+plugins:
+  - search
+  - awesome-pages
     
+
+
 
 extra_css:
   - stylesheets/cards.css
