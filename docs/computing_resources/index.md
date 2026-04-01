@@ -1,6 +1,6 @@
 # Computing Resources
 
-## [Don't know where to start? Follow this walkthrough](./tutorials/computing_walkthrough.md). 
+## [Don't know where to start? Follow this walkthrough](./tutorials/computing_walkthrough.md)
 This is a curated collection and ordering of tutorials and documentation to step you through all the information in an order that makes sense, and builds from the previous step. You can choose your own starting point, or dive into a page you are most interested in.
 
 ## [Tutorials](./tutorials/index.md)
