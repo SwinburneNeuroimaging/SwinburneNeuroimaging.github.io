@@ -85,11 +85,10 @@ plugins:
   - awesome-pages
     
 
-
-
 extra_css:
   - stylesheets/cards.css
   - stylesheets/home.css
+  - stylesheets/facilities.css
 
 
   

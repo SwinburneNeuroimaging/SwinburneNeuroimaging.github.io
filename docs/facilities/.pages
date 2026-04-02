@@ -1,4 +1,5 @@
 nav:
+  - index.md
   - mri.md
   - meg.md
   - eeg.md
