@@ -1,0 +1,14 @@
+Bootstrap: docker
+From: python:3.12-slim
+
+%post
+    pip install --no-cache-dir \
+        mkdocs-material \
+        mkdocs-awesome-pages-plugin
+
+%runscript
+    exec mkdocs "$@"
+
+%labels
+    Author SNI
+    Description MkDocs environment for Swinburne Neuroimaging Documentation
