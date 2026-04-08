@@ -1,7 +1,5 @@
 # Tutorials
 
-Don't know where to start? Follow this document
-
 ## Beginner Computing
 - [Linux Command Line (CLI) Basics](./basics/linux_command_line_basics.md)
 - [Shell Scripting Basics](./basics/shell_scripting_basics.md)

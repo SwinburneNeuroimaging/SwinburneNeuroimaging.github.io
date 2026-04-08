@@ -2,13 +2,6 @@
 
 ![Swinburne magnetic resonance imaging (MRI) machine, a Siemens 3T Prisma.](/assets/images/facilities/sni_mri.png)
 
-![IMAGE OF MRI OUTPUTS]
-
-!!! info "What is MRI?"
-    INFO ABOUT MRI
-
-!!! 
-
 Magnetic resonance imaging (MRI) is a medical imaging technique that uses a powerful magnetic field to obtain very detailed cross-sectional images inside the body and brain.
 
 Our Siemens 3 Tesla whole-body MRI scanner offers extremely fine-grained structural and functional images of the entire body. It also has specialised equipment for human brain imaging.
