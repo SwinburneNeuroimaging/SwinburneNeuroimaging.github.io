@@ -19,7 +19,7 @@ cd SwinburneNeuroimaging.github.io
 ```
 ### Step 2: Checkout to the Development Branch
 ```
-git checkout wiki
+git checkout name_edits
 ```
 ### Step 3: Setup Python Environment
 ```
@@ -36,11 +36,27 @@ source venv/bin/activate
 pip install mkdocs-material
 pip install mkdocs-awesome-pages-plugin
 ```
+
 ### Step 5: Serve documentation to preview changes locally
 ```
 mkdocs serve --livereload
 ```
 The site will be available at http://localhost:8000. The server will automatically reload when you save changes.
+
+#### Steps 3, 4, & 5 summarised
+```
+python -m venv venv
+source venv/bin/activate
+pip install mkdocs-material mkdocs-awesome-pages-plugin
+mkdocs serve --livereload
+```
+
+### Apptainer
+If you know what you are doing with apptainer, then I have included a `mkdocs.def` file that should replace your python environment.
+```
+apptainer build mkdocs.sif mkdocs.def
+apptainer exec mkdocs.sif mkdocs serve --livereload
+```
 
 ## Adding New Content
 ### Creating a New Page
