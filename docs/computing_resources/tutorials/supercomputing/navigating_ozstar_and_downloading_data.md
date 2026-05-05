@@ -4,7 +4,7 @@ Files can be downloaded and uploaded to and from the supercomputer to a local co
 
 One such graphical interface we recommend is [FileZilla](https://filezilla-project.org/). You can [follow the official FileZilla tutorial](https://wiki.filezilla-project.org/FileZilla_Client_Tutorial_(en)) on their website, or follow our one below for specifc OzSTAR/NT usage. 
 
-!!! note
+!!! note "Create an account first!"
     If you haven't already [created an OzSTAR/NT account](./create_ozstar_account.md), you'll need to create one first and [join an OzSTAR/NT project](./join_an_ozstar_project.md) to get access to the data.
 
 ## FileZilla
@@ -39,7 +39,7 @@ You can transfer files between local computer to the supercomputer by drag and d
 
 To locate your data, change the Remote Site (top of yellow region) to `/fred/ozXXX/` where `ozXXX` is your OzSTAR/NT project number.
 
-!!! warning
+!!! warning "Be careful when moving files around on OzSTAR/NT"
     Files can be dragged between the local and supercomputers by dragging files from the left side of the screen to the right side of the screen (and vice versa). **Dragging files from one side to the other side only copies files between the computers and does not move them**. 
 
     The location of files on the Supercomputer can be changed using FileZilla, by dragging files from one place to another (on the right side of the screen). **Dragging files from one location to another on the Supercomputer will move them instead of copying them**, therefore users should be careful not to accidently drag files or directories to incorrect places.
@@ -77,7 +77,6 @@ If you have previously [set up SSH keys](../basics/ssh_basics.md#ssh-keys---pass
 - In the User window, type your OzSTAR/NT username.
 - In Key File type the full path to your *private key*. It will be in your `.ssh` folder. If you [set up SSH keys using this method](../basics/ssh_basics.md#ssh-keys---passwordless-login), then a common place for your private key is `/Users/<username>/.ssh/id_ed25519` 
 - Click "Connect".
-
 
 
 ## Navigating using terminal/command Line

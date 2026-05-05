@@ -40,10 +40,13 @@ Hello, world!
 Today is: Mon Mar 30 10:00:00 AEDT 2026
 ```
 
-!!! tip
-    The ./ before the script name tells the terminal to look for the script in the current directory. Without it, the terminal will look for the command in the system's standard locations and won't find it. 
+!!! tip 
+    The `./` before the script name tells the terminal to look for the script in the current directory. Without it, the terminal will look for the command in the system's standard locations and won't find it. 
 
     You can also specify the whole path if you need to: `./Users/User/Documents/my_script.sh`
+
+
+Now that you can run a shell script, the rest of this tutorial are features you might want to add to your script, including, variables, loops, conditionals, command line arguments and functions.
 
 ## Variables
 Variables let you store values and reuse them throughout your script. You define a variable with `=` (no spaces around it) and access its value with `$`.
@@ -124,7 +127,7 @@ else
     echo "Processing $subject..."
 fi
 ```
-!!! warning
+!!! warning "Check the spaces"
     The spaces in an `if/fi` statement are important, particually the spaced around `[ -f "$output" ]`.
 
 The `-f` flag checks whether a file exists. Here are the most useful test flags:
@@ -167,7 +170,6 @@ Then you can run it like this:
 ```bash
 $ ./my_script.sh sub-01 ses-01
 ```
-
 
 It can be good practice to check that required arguments were actually given:
 ```bash linenums="1" hl_lines="3-6"

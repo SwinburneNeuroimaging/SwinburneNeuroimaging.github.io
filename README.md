@@ -34,6 +34,7 @@ source venv/bin/activate
 
 # Install MkDocs Material
 pip install mkdocs-material
+pip install mkdocs-awesome-pages-plugin
 ```
 ### Step 5: Serve documentation to preview changes locally
 ```

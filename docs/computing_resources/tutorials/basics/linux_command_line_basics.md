@@ -1,13 +1,13 @@
 # Linux Command Line (CLI) Basics 
 
-The Linux command line (also called a terminal or shell) is a text-based interface for interacting with your computer. Rather than clicking icons and menus, you type commands directly. For neuroimaging research, the command line is essential, a lot of computing software and tools will run primarily or exclusively from the terminal.
+The Linux command line (also called a terminal or shell) is a text-based interface for interacting with your computer. Rather than clicking icons and menus, you type commands directly. For neuroimaging research, the command line is essential, a lot of computing software and tools will run primarily or exclusively from the terminal. 
 
 ## Opening a terminal
 Choose which operating system you are using 
 === "Linux"
     Press Ctrl + Alt + T, or search for "Terminal" in your applications menu.
 
-=== "macOS"
+=== "MacOS"
     Open Finder → Applications → Utilities → Terminal, or press Cmd + Space and type Terminal.
 
 === "Windows (via WSL)"
@@ -146,7 +146,7 @@ To delete a file or directory, use the `rm` command. However, use it carefully.
 $ rm file.txt                  # Delete a file
 $ rm -r my_folder/             # Delete a directory and everything inside it
 ```
-!!! warning
+!!! warning "Deleted files are permanent"
     There is no recycle bin in the terminal! **Deleted files are gone permanently!** I'll say that again. *Deleted files are gone permanently*. Double-check your `rm` command before pressing Enter. Avoid `rm -rf` (force delete recursively) unless you are 100% certain of what you are deleting.
 
 
@@ -207,7 +207,7 @@ $ rm /data/sub-01/func/*_temp.nii.gz
 $ ls -d sub-*/ | wc -l
 ```
 
-!!! warning
+!!! warning "Use `ls` before `rm`"
     Wildcards expand before the command runs. The command `rm *.nii.gz` deletes every matching file immediately. Always run `ls *.nii.gz` first to preview what a wildcard will match before using it with `rm` or `mv`.
 
 ## Searching for files

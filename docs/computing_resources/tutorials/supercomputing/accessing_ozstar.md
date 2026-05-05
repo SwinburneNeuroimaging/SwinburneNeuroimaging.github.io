@@ -1,8 +1,8 @@
 # Accessing the Supercomputer
 
-OzSTAR and NT are [Swinburne's two supercomputers](https://supercomputing.swin.edu.au/), they are powerful linked machines designed to help Australian researchers analyse large amounts of data and run complex calculations that would be impossible on a regular computer or laptop. 
+OzSTAR and NT are [Swinburne's two supercomputers](https://supercomputing.swin.edu.au/), they are designed to help Australian researchers analyse large amounts of data and run complex calculations that would be impossible on a regular computer or laptop.
 
-To access neuroimaging data (MRI/DICOM, MEG/FIF) or your study requires supercomputing resources for data analysis, such as running analysis using Freesurfer, MRTrix, fMRIPrep, mne-python pipelines, then the following information/instructions might be helpful.
+To access neuroimaging data (MRI/DICOM, MEG/FIF) obtained at SNI or if your study requires supercomputing resources for data analysis, such as running analysis using Freesurfer, MRTrix, fMRIPrep, mne-python pipelines, then you can access Swinburne's supercomuters using the following instructions.
 
 !!! tip
     If you don't yet have an OzSTAR/NT account, you can apply for one and create or join a project on the [OzSTAR account portal](https://supercomputing.swin.edu.au/account-management/login) and by following the [Creating an OzSTAR/NT Account](./create_ozstar_account.md) tutorial. Your username can be found on the portal, and your password can also be reset there.
@@ -28,9 +28,7 @@ MacOS and Linux both have their build-in applications (Terminal for MacOS, Conso
 
     **WindTerm** is a free cross-platform SSH client with a more user-friendly interface. You can [download it here](https://github.com/kingToolbox/WindTerm).
 
-
     ![Windows-Powershell](https://github.com/user-attachments/assets/326d9903-e362-488b-8f3b-201f5345d5ce)
-
 
 ### Login
 Once you have a terminal open, connect to OzSTAR using SSH with your username:
@@ -74,7 +72,7 @@ You should now find a new file in your home directory called `ozXXX`. You can `$
 
 ## Transferring files with FileZilla
  
-If you prefer a graphical interface for accessing and downloading data, [FileZilla](https://filezilla-project.org/) is a free file transfer program that connects to OzSTAR/NT over SSH. You can drag and drop files between your local machine and OzSTAR without using the command line.
+If you prefer a graphical interface for accessing and downloading data, [FileZilla](https://filezilla-project.org/) is a free file transfer program that can connect to OzSTAR/NT over SSH. You can drag and drop files between your local machine and OzSTAR without using the command line.
  
 See the [Nagivating the supercomputer and downloading data](../supercomputing/navigating_ozstar_and_downloading_data.md) guide for detailed instructions on how to install and connect FileZilla to OzSTAR.
  
