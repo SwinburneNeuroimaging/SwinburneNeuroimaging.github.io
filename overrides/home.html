@@ -1,0 +1,93 @@
+{% extends "main.html" %}
+
+{% block tabs %}
+  {{ super() }}
+  <!-- Hero -->
+  <section class="sni-hero">
+    <div class="sni-hero__image">
+      <img
+        src="{{ 'assets/images/sni_banner.jpeg' | url }}"
+        alt="Swinburne Neuroimaging banner"
+        draggable="false"
+      >
+    </div>
+    <div class="sni-hero__overlay"></div>
+    <div class="sni-hero__content md-typeset">
+      <h1>Swinburne Neuroimaging Docs</h1>
+      <p>{{ config.site_description or "Our Neuroimaging facility supports cutting-edge research into the brain and its disorders. We're the international field leaders and boast Australia's fastest human brain imaging system. " }}</p>
+      
+      <div class="sni-hero__buttons">
+        <a href="{{ 'about/' | url }}" class="md-button md-button">
+          About Us
+        </a>
+        <a href="{{ 'facilities/' | url }}" class="md-button md-button--primary">
+          Our Facilities
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature cards -->
+<section class="sni-features md-typeset">
+  <div class="sni-features__grid">
+
+    <a href="{{ 'start_a_project/' | url }}" class="sni-card">
+      <div class="sni-card__bar sni-card__bar--teal"></div>
+      <span class="sni-card__tag sni-card__tag--teal">Facilities</span>
+      <h2>I want to use SNI's facilities for a project</h2>
+      <p>Book time on our MRI, MEG, EEG, or TMS equipment. We can support you throughout your project.</p>
+      <span class="sni-card__arrow">Start a project →</span>
+    </a>
+
+    <a href="{{ 'computing_resources/tutorials/supercomputing/accessing_ozstar/' | url }}" class="sni-card">
+      <div class="sni-card__bar sni-card__bar--blue"></div>
+      <span class="sni-card__tag sni-card__tag--blue">Computing</span>
+      <h2>I want to access the Supercomputer</h2>
+      <p>Set up supercomputer access and Neurodesk. Process neuroimaging data using SNI's HPC infrastructure.</p>
+      <span class="sni-card__arrow">Accessing OzSTAR/NT →</span>
+    </a>
+
+    <a href="{{ 'computing_resources/tutorials/computing_walkthrough/' | url }}" class="sni-card">
+      <div class="sni-card__bar sni-card__bar--amber"></div>
+      <span class="sni-card__tag sni-card__tag--amber">Walkthough</span>
+      <h2>I need a walkthough of your computing resources</h2>
+      <p>A curated guide to our tutorials and documentation, ordered such that each builds on the last.</p>
+      <span class="sni-card__arrow">View tutorials walkthrough →</span>
+    </a>
+
+  </div>
+</section>
+
+  <!-- Scroll fade-in script -->
+<script>
+  document$.subscribe(function () {
+    const cards = document.querySelectorAll(".sni-card");
+
+    cards.forEach((card) => {
+      card.classList.remove("animate", "visible");
+    });
+
+    setTimeout(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      cards.forEach((card, i) => {
+        card.classList.add("animate");
+        setTimeout(() => observer.observe(card), i * 100);
+      });
+    }, 50);
+  });
+</script>
+{% endblock %}
+
+{% block content %}{% endblock %}
+{% block footer %}{% endblock %}

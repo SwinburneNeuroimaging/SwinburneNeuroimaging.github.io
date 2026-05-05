@@ -1,0 +1,94 @@
+site_name: Swinburne Neuroimaging Documentation
+site_url: https://SwinburneNeuroimaging.github.io/
+theme:
+  name: material
+  font:
+    text: Roboto
+    code: Roboto Mono
+  logo: assets/icons/sni_logo-transparent.png
+  favicon: assets/icons/sni_logo-favicon.ico
+  features:
+    - search.highlight
+    - search.suggest
+    - content.code.annotate
+    - content.code.copy
+    - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.top
+    - navigation.indexes
+
+  custom_dir: overrides
+
+
+
+  palette:
+    # Light Mode
+    # - scheme: default
+    #   toggle:
+    #     icon: material/weather-night
+    #     name: Light mode
+    #   primary: red
+    #   accent: deep-blue
+
+    # # Dark Mode
+    # - scheme: slate
+    #   toggle:
+    #     icon: material/weather-sunny
+    #     name: Dark mode
+    #   primary: blue
+    #   accent: purple
+    # Light mode
+    - scheme: default
+      primary: blue
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    # Dark mode
+    - scheme: slate
+      primary: blue
+      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - md_in_html
+
+plugins:
+  - search
+  - awesome-pages
+    
+
+extra_css:
+  - stylesheets/cards.css
+  - stylesheets/home.css
+  - stylesheets/facilities.css
+
+
+  
