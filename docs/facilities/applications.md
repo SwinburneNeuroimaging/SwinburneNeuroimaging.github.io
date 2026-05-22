@@ -1,7 +1,5 @@
 # How do I come use these facilities?
 
-Test
-
 ## Contact us!
 We can help you with all steps of your research such as, project conception, project design and logistical planning, advice on research ethics, advice on data management and providing expert training in data analysis. 
 
