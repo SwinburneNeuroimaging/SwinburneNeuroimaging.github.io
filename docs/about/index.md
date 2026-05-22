@@ -1,5 +1,8 @@
 # About
 
+![THe SNI team in 2026](../assets/team/sni_team_2026.jpg){ loading=lazy }
+
+
 ## Swinburne Neuroimaging
 As a key member of the National Imaging Facility (NIF), our specialist facilities and expertise at Swinburne Neuroimaging is open to all Australian researchers and enables them to tackle today’s most pressing brain-related research questions. 
 

@@ -1,19 +1,19 @@
 # SNI Team & Contacts
 <div class="team-grid" markdown>
 <div class="team-card" markdown>
-![David White](../assets/team/david-white.jpg)
+![David White](../assets/team/david_white.jpg)
 **David White**
 Director, Swinburne Neuroimaging Facility
 </div>
 
 <div class="team-card" markdown>
-![Rachel Oliver (Batty)](../assets/team/blank-avatar.jpg)
+![Rachel Oliver (Batty)](../assets/team/rachel_oliver_crop.jpg)
 **Rachel Oliver (Batty)**
 Operations Manager, Swinburne Neuroimaging Facility
 </div>
 
 <div class="team-card" markdown>
-![Annalaise Takla](../assets/team/blank-avatar.jpg)
+![Annalaise Takla](../assets/team/annalaise_takla_crop.jpg)
 **Annalaise Takla**
 Senior MRI Radiographer
 </div>
@@ -25,31 +25,31 @@ MRI Radiologist
 </div>
 
 <div class="team-card" markdown>
-![Rory Knight-Sadler](../assets/team/blank-avatar.jpg)
+![Rory Knight-Sadler](../assets/team/rory_knight-sadler_crop.jpg)
 **Rory Knight-Sadler**
 MEG Technician
 </div>
 
 <div class="team-card" markdown>
-![Will Woods](../assets/team/will-woods.jpg)
+![Will Woods](../assets/team/will_woods_crop.jpg)
 **Will Woods**
 MEG Fellow
 </div>
 
 <div class="team-card" markdown>
-![Matthew Hughes](../assets/team/matthew-hughes.jpg)
+![Matthew Hughes](../assets/team/matthew_hughes.jpg)
 **Matthew Hughes**
 MRI Fellow
 </div>
 
 <div class="team-card" markdown>
-![Miao Cao](../assets/team/miao-cao.png)
+![Miao Cao](../assets/team/miao_cao.jpg)
 **Miao Cao**
 Neuroinformatics Fellow
 </div>
 
 <div class="team-card" markdown>
-![Adam Batten](../assets/team/adam-batten.jpg)
+![Adam Batten](../assets/team/adam_batten_crop.jpg)
 **Adam Batten**
 Neuroinformatics Fellow
 </div>
