@@ -14,10 +14,10 @@
     <div class="sni-hero__overlay"></div>
     <div class="sni-hero__content md-typeset">
       <h1>Swinburne Neuroimaging Docs</h1>
-      <p>{{ config.site_description or "Our Neuroimaging facility supports cutting-edge research into the brain and its disorders. We're the international field leaders and boast Australia's fastest human brain imaging system. " }}</p>
+      <h2>{{ config.site_description or "Our Neuroimaging facility supports cutting-edge research into the brain and its disorders." }}</h2>
       
       <div class="sni-hero__buttons">
-        <a href="{{ 'about/' | url }}" class="md-button md-button">
+        <a href="{{ 'about/' | url }}" class="md-button md-button--primary">
           About Us
         </a>
         <a href="{{ 'facilities/' | url }}" class="md-button md-button--primary">
