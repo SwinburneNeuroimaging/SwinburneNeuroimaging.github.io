@@ -28,7 +28,7 @@ The script will run automatically and install some extra packages. Then you will
 4. the current ozstar 2FA code from your phone
 
 !!! info "What is a 2FA code?"
-   If you have not already set up 2FA for your ozstar account, you can do so [here](https://supercomputing.swin.edu.au/account-management/2fa). You will need to be logged in to the Accounts Portal using your ozstar username and password. 
+    If you have not already set up 2FA for your ozstar account, you can do so [here](https://supercomputing.swin.edu.au/account-management/2fa). You will need to be logged in to the Accounts Portal using your ozstar username and password. 
 
 
 Sometimes the connection to the ozstar filesystem will be dropped - this will happen if the machine gets 'shelved' for instance. (This may show up as an `Input/output error`) 
