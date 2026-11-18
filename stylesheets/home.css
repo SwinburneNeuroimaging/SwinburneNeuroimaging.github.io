@@ -1,0 +1,230 @@
+/* Hero section */
+.sni-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+.sni-hero__image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.sni-hero__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  will-change: transform;
+}
+
+.sni-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  z-index: 1;
+}
+
+.sni-hero__content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  max-width: 800px;
+  padding: 2rem;
+  animation: fadeInUp 0.9s ease both;
+}
+
+.sni-hero__content h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white !important;
+  line-height: 1.2;
+}
+
+.sni-hero__content p {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.sni-hero__buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.sni-hero__buttons .md-button {
+  min-width: 160px;
+}
+
+/* Feature cards */
+.sni-features {
+  padding: 4rem 1rem;
+}
+
+.sni-features__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sni-card {
+  position: relative;
+  overflow: hidden;
+  padding: 1.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  background: var(--md-default-bg-color);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
+}
+
+.sni-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sni-card:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+}
+
+.sni-card h2 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.sni-card p {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  margin: 0;
+}
+
+/* Coloured top bar accent (home page cards only) */
+.sni-card__bar {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+}
+.sni-card__bar--teal   { background: #1D9E75; }
+.sni-card__bar--blue   { background: #378ADD; }
+.sni-card__bar--purple { background: #7F77DD; }
+.sni-card__bar--amber  { background: #BA7517; }
+
+/* Category pill */
+.sni-card__tag {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  width: fit-content;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.sni-card__tag--teal   { background: #E1F5EE; color: #0F6E56; }
+.sni-card__tag--blue   { background: #E6F1FB; color: #185FA5; }
+.sni-card__tag--purple { background: #EEEDFE; color: #534AB7; }
+.sni-card__tag--amber  { background: #FAEEDA; color: #854F0B; }
+
+/* Arrow footer */
+.sni-card__arrow {
+  font-size: 13px;
+  color: var(--md-default-fg-color--light);
+  display: block;
+  text-align: right;
+  margin-top: 0.75rem;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Facilities page spotlight */
+.sni-spotlight {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 0 2rem;
+}
+
+.sni-spotlight__item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 3rem 0;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.sni-spotlight__item--reverse {
+  direction: rtl;
+}
+
+.sni-spotlight__item--reverse > * {
+  direction: ltr;
+}
+
+.sni-spotlight__image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+.sni-spotlight__content h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.sni-spotlight__content p {
+  opacity: 0.8;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 60em) {
+  .sni-spotlight__item {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+}
+
+.sni-card {
+  position: relative;
+  overflow: hidden;
+  padding: 1.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  background: var(--md-default-bg-color);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  opacity: 1;                          /* visible by default */
+  transform: translateY(0);            /* no offset by default */
+  transition: box-shadow 0.3s ease;   /* only animate shadow on hover */
+}
+
+.sni-card.animate {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
+}
+
+.sni-card.animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
