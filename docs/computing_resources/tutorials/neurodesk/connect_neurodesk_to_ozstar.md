@@ -15,53 +15,35 @@ Open a new terminal window in your Neurodesk environment.
 
 Copy and paste the following command into the terminal and press ENTER:
 
-```bash
-cd; curl -o connect_ozstar_user.sh https://raw.githubusercontent.com/SwinburneNeuroimaging/swinburne_tools/main/connect_ozstar_user.sh
 ```
-This downloads a script that Swinburne Neuroimaging has created to help connecting to OzSTAR easier.
-
-**Step 3: Run the connection script**
-
-Type the following command, replacing `XXX` with your OzSTAR username, and press ENTER:
-
-```bash
-cd; source connect_ozstar_user.sh XXX
+curl -Ls https://raw.githubusercontent.com/SwinburneNeuroimaging/swinburne_tools/main/ozstar_setup.sh > /tmp/tmp.sh; source /tmp/tmp.sh
 ```
+This downloads a script that Swinburne Neuroimaging has created to help connecting to OzSTAR easier. This only has to be done once when the virtual machine is created. 
 
-**Step 4: Confirm the connection**
+The script will run automatically and install some extra packages. Then you will be prompted for 
 
-You will be asked a yes/no question. Type `yes` and press ENTER.
+1. your *ozstar* username
+2. your *ozstar* password
+3. a passphrase for the ssh key (twice) - this should *not* be the same as your password
+4. the current ozstar 2FA code from your phone
 
-**Step 5: Enter your password**
+!!! info "What is a 2FA code?"
+   If you have not already set up 2FA for your ozstar account, you can do so [here](https://supercomputing.swin.edu.au/account-management/2fa). You will need to be logged in to the Accounts Portal using your ozstar username and password. 
 
-You will be prompted to enter your OzSTAR password **3 times** (once for each folder being mapped: `/fred`, `/dagg`, and `/home`).
 
-After each successful password entry, you should see the message:
+Sometimes the connection to the ozstar filesystem will be dropped - this will happen if the machine gets 'shelved' for instance. (This may show up as an `Input/output error`) 
 
+You can run the command 
 ```
-SUCCESS!
+reconnect_ozstar
 ```
+in a terminal to reconnect to ozstar at any time.
 
-!!! warning "Important: Password Attempts"
-    **Three consecutive incorrect passwords will block your OzSTAR access for 24 hours.** When blocked, you'll see the error message: `read: Connection reset by peer`
-    
-    If you see this error, contact OzSTAR support at [hpc-support@swin.edu.au](mailto:hpc-support@swin.edu.au) with your username for urgent assistance.
-
-!!! danger "Troubleshooting: No SUCCESS! Message"
-    If you don't see `SUCCESS!` after entering your password, this indicates:
-    
-    1. **Incorrect username**: Close the terminal, open a new one, and run the command with the correct username
-    2. **Incorrect password**: Double-check your password and try again carefully
-
-**Step 6: Create your private directory**
-
-Type the following command, replacing `XXX` with your OzSTAR username:
-
-```bash
-mkdir /home/XXX/private
+To open a shell to ozstar (i.e. log in over ssh, for example to submit jobs), just type
 ```
-
-Press ENTER.
+sshoz
+```
+You may occasionally get prompted for a 2FA code (or the passphrase you entered), both with this and the 'reconnect_ozstar' commands, but (hopefully) not often.
 
 ## What You Can Access
 
@@ -69,18 +51,9 @@ After successful connection, you'll have access to these OzSTAR directories from
 
 | Directory | Location | Purpose |
 |-----------|----------|---------|
-| **Home Directory** | `/home/XXX/private` | Your personal OzSTAR storage (10GB limit) |
+| **Home Directory** | `/home/XXX` | Your personal OzSTAR storage (10GB limit) |
 | **Neuroimaging Public** | `/dagg/public/neuro` | Shared neuroimaging resources and datasets |
 | **Project Directory** | `/fred/ozYYY` | Your project's shared storage (replace `ozYYY` with your project ID) |
-
----
-
-## Persistence and Reconnection
-
-!!! info "Connection Persistence"
-    **Good news:** The connection setup is permanent for the life of your desktop. You don't need to repeat these steps for future logins.
-    
-    **Exception:** If you shelve and restart your virtual desktop, you'll need to repeat Step 5 (entering your password 3 times) to re-establish the connection.
 
 ---
 
@@ -90,10 +63,11 @@ After successful connection, you'll have access to these OzSTAR directories from
     **Always save your work** in one of these locations:
     
     - `/fred/ozYYY` (your project directory)
-    - `/home/XXX/private` (your home directory, if space permits)
+    - `/home/XXX` (your home directory, if space permits)
     - Subdirectories within these folders
     
     **Files saved elsewhere will be deleted** if you don't use your ARDC Virtual Desktop for a few months, or if you upgrade or delete your desktop.
+    **Files save in /fred/ozYYY will **not** be backed up by system administrators, but files in /home/XXX *will* be backed up.
 
 ---
 
