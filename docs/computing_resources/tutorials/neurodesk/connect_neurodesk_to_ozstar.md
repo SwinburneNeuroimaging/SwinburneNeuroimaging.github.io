@@ -13,7 +13,7 @@ Open a new terminal window in your Neurodesk environment.
 
 **Step 2: Download the connection script**
 
-Copy and paste the following command into the terminal and press ENTER:
+Copy and paste (using shift-ctrl-v) the following command into the terminal and press ENTER:
 
 ```
 curl -Ls https://raw.githubusercontent.com/SwinburneNeuroimaging/swinburne_tools/main/ozstar_setup.sh > /tmp/tmp.sh; source /tmp/tmp.sh
